@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <script src="script.js"></script>
+
+        <!-- highlight.js for code segments -->
+        <link rel="stylesheet" href="atom-one-dark.min.css">
+        <script src="highlight.pack.js"></script>
+        <script>
+            hljs.configure({useBR: true});
+            hljs.highlightBlock($('div').get(0));
+        </script>
+
+        <title>
+            Onyx
+        </title>
+    </head>
+
+    <body>
+        <div class="sidebar">
+            <img src="images/onyx.png" alt="Onyx" style="width:150px;height:150px;">
+            <a href="#setup">Setup</a>
+            <a href="#functions">Functions</a>
+            <a href="#selectors">Selector Builder</a>
+            <button class="sidebar-commands-btn">
+                Commands 
+                <i class="caret-icon"></i>
+            </button>
+            <div class="commands-container">
+                <li><a href="#say">say</a></li>
+                <li><a href="#tellraw">tellraw</a></li>
+            </div>
+        </div>
+          
+        <div class="main">
+            <div class="title">
+                <h1>
+                    Onyx Documentation
+                </h1>
+                <p>
+                    If you're interested in seeing the source code, you can check that out <a href="https://github.com/ProfessorFelix/Onyx" target="_blank" rel="noopener">here</a>.
+                </p>
+                <hr>
+                <h2 id="setup">
+                    Setup
+                </h2>
+            </div>
+            <p>
+                To install the Onyx library, run <code>pip install onyx</code> in the terminal. Make a new file wherever and call it whatever you want, just make sure it has a <code>.py</code> extension.<br>
+                Inside that file, add the following lines:
+            </p>
+            <div class="code">
+                <p class="python">
+                    from onyx import *
+                    Handler(datapack_path)
+                </p>
+            </div>
+            <br>
+            <hr>
+            <div class="title">
+                <h2 id="functions">
+                    Functions
+                </h2>
+            </div>
+            <p>
+                Minecraft functions are created very similar to Python. The below segment will create a function in <code>D:/onyx_docs/data/onyx_docs/functions/foo/bar.mcfunction</code>
+                </code>
+            </p>
+            <div class="code">
+                <p class="python">
+                    from onyx import *
+                    Handler("D:\onyx_docs")
+
+                    @path("foo")
+                    def bar():
+                        say("Hello, World!")
+                </p>
+            </div>
+            <p>You can also add a function to <code>tick.json</code> (so it runs twenty times per second) by using the <code>@loop</code> decorator like so:</p>
+            <div class="code">
+                <p class="python">
+                    @loop
+                    @path("foo")
+                    def bar():
+                        say("Hello, World!")
+                </p>
+            </div>
+            <p>
+                Be advised that the loop decorator <i><b>must</b></i> be put above the path decorator.
+            </p>
+            <br>
+            <hr>
+            <div class="title">
+                <h2 id="selectors">
+                    Selector Builder
+                </h2>
+            </div>
+            <p>
+                Builds a selector with the specified parameters.
+
+            </p>
+            <div class=code>
+                <p class="python">
+                    my_selector = Selector(at.all_players, tag=(moderator, flyPerms), gamemode=mode.creative)
+                </p>
+            </div>
+            <p>converts to</p>
+        </div>
+    </body>
+</html>
