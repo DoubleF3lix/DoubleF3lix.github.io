@@ -5,14 +5,6 @@
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
         <script src="script.js"></script>
 
-        <!-- highlight.js for code segments -->
-        <link rel="stylesheet" href="atom-one-dark.min.css">
-        <script src="highlight.pack.js"></script>
-        <script>
-            hljs.configure({useBR: true});
-            hljs.highlightBlock($('div').get(0));
-        </script>
-
         <title>
             Onyx
         </title>
@@ -52,7 +44,7 @@
                 Inside that file, add the following lines:
             </p>
             <div class="code">
-                <p class="python">
+                <p>
                     from onyx import *
                     Handler(datapack_path)
                 </p>
@@ -69,7 +61,7 @@
                 </code>
             </p>
             <div class="code">
-                <p class="python">
+                <p>
                     from onyx import *
                     Handler("D:\onyx_docs")
 
@@ -80,7 +72,7 @@
             </div>
             <p>You can also add a function to <code>tick.json</code> (so it runs twenty times per second) by using the <code>@loop</code> decorator like so:</p>
             <div class="code">
-                <p class="python">
+                <p>
                     @loop
                     @path("foo")
                     def bar():
@@ -102,7 +94,7 @@
 
             </p>
             <div class=code>
-                <p class="python">
+                <p>
                     my_selector = Selector(at.all_players, tag=(moderator, flyPerms), gamemode=mode.creative)
                 </p>
             </div>
