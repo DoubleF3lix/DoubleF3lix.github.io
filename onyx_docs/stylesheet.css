@@ -53,7 +53,7 @@ p {
     padding-left: 20px;
 }
 
-.sidebar a, .sidebar-commands-btn {
+.sidebar a {
     font-family: Arial;
     text-decoration: none;
     padding: 6px 8px 6px 16px;
@@ -63,10 +63,6 @@ p {
     cursor: pointer;
     outline: none;  
     text-align: left;
-}
-
-.sidebar a:hover .sidebar-commands-btn:hover{
-    color: white;
 }
 
 .sidebar ul {
@@ -81,25 +77,9 @@ p {
     margin-left: 25px;
 }
 
-.commands-container {
-    display: none;
-    background-color: #262626;
-    padding-left: 8px;
-}
-
-.caret-icon {
-    float: right;
-    padding-right: 8px;
-}
-
-.active {
-    background-color: green;
-    color: white;
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+.sidebar ul li a {
+    font-size: 17px;
+    font-weight: bold;
 }
 
 .code {
@@ -126,4 +106,9 @@ code {
     color: white;
     background-color: #2F3B44;
     padding: 2px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }
