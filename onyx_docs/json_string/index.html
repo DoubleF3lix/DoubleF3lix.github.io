@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>onyx.json_string &mdash; Onyx  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="onyx.pack_manager" href="../pack_manager/" />
+    <link rel="prev" title="onyx.experience" href="../experience/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home" alt="Documentation Home"> Onyx
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../bossbar/">onyx.bossbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands/">onyx.commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/">oynx.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datapack/">oynx.datapack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../effect/">onyx.effect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enums/">onyx.enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execute/">onyx.execute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experience/">onyx.experience</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">onyx.json_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pack_manager/">onyx.pack_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scoreboard/">onyx.scoreboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selector/">onyx.selector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../util/">onyx.util</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Onyx</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>onyx.json_string</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/json_string.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-onyx.json_string">
+<span id="onyx-json-string"></span><h1>onyx.json_string<a class="headerlink" href="#module-onyx.json_string" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="onyx.json_string.json_string">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.json_string.</code><code class="sig-name descname">json_string</code><a class="headerlink" href="#onyx.json_string.json_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a json_string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>translate</strong> (<em>str</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>With</strong> (<em>list</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>score</strong> (<em>tuple</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>selector</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>keybind</strong> (<a class="reference internal" href="../enums/#onyx.enums.key" title="onyx.enums.key"><em>key</em></a><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>nbt</strong> (<em>str</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>interpret</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>block</strong> (<em>tuple</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>entity</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>storage</strong> (<em>str</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>extra</strong> (<em>list</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>color</strong> (<em>color_enum</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>font</strong> (<em>str</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>bold</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>italic</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>underlined</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>strikethrough</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>obfuscated</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>insertion</strong> (<em>str</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>clickEvent</strong> (<em>dict</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+<li><p><strong>hoverEvent</strong> (<em>dict</em><em>, </em><em>optional</em>) – Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../pack_manager/" class="btn btn-neutral float-right" title="onyx.pack_manager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../experience/" class="btn btn-neutral float-left" title="onyx.experience" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,658 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>onyx.enums &mdash; Onyx  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="onyx.execute" href="../execute/" />
+    <link rel="prev" title="onyx.effect" href="../effect/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home" alt="Documentation Home"> Onyx
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../bossbar/">onyx.bossbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands/">onyx.commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/">oynx.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datapack/">oynx.datapack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../effect/">onyx.effect</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">onyx.enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execute/">onyx.execute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experience/">onyx.experience</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../json_string/">onyx.json_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pack_manager/">onyx.pack_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scoreboard/">onyx.scoreboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selector/">onyx.selector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../util/">onyx.util</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Onyx</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>onyx.enums</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/enums.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-onyx.enums">
+<span id="onyx-enums"></span><h1>onyx.enums<a class="headerlink" href="#module-onyx.enums" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="onyx.enums.mode">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">mode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gamemode list</p>
+<ul class="simple">
+<li><p>survival</p></li>
+<li><p>creative</p></li>
+<li><p>adventure</p></li>
+<li><p>spectator</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.sort">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">sort</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used for sort property in selectors</p>
+<ul class="simple">
+<li><p>arbitrary</p></li>
+<li><p>furthest</p></li>
+<li><p>nearest</p></li>
+<li><p>random</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.at">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">at</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.at" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used for selector type</p>
+<ul class="simple">
+<li><p>all_players</p></li>
+<li><p>all_entities</p></li>
+<li><p>nearest_player</p></li>
+<li><p>random_player</p></li>
+<li><p>selected_entity</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.axis">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">axis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used for <cite>align</cite> in execute command</p>
+<ul class="simple">
+<li><p>x</p></li>
+<li><p>y</p></li>
+<li><p>z</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.anchor">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">anchor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.anchor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used for <cite>anchored</cite> in execute command</p>
+<ul class="simple">
+<li><p>feet</p></li>
+<li><p>eyes</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.dimension">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">dimension</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.dimension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used for <cite>in</cite> in execute command</p>
+<ul class="simple">
+<li><p>overworld</p></li>
+<li><p>nether</p></li>
+<li><p>end</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.bossbar_trait">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">bossbar_trait</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.bossbar_trait" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used for modifying a bossbar property</p>
+<ul class="simple">
+<li><p>color</p></li>
+<li><p>max_value</p></li>
+<li><p>name</p></li>
+<li><p>players</p></li>
+<li><p>style</p></li>
+<li><p>value</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.style">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">style</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.style" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used for modifying the style of a bossbar</p>
+<ul class="simple">
+<li><p>six_segments</p></li>
+<li><p>ten_segments</p></li>
+<li><p>twelve_segments</p></li>
+<li><p>twenty_segments</p></li>
+<li><p>solid</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.color">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">color</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default colors (text-components and bossbars)</p>
+<ul class="simple">
+<li><p>black</p></li>
+<li><p>dark_blue</p></li>
+<li><p>dark_green</p></li>
+<li><p>dark_aqua</p></li>
+<li><p>dark_red</p></li>
+<li><p>dark_purple</p></li>
+<li><p>gold</p></li>
+<li><p>gray</p></li>
+<li><p>dark_gray</p></li>
+<li><p>blue</p></li>
+<li><p>green</p></li>
+<li><p>pink</p></li>
+<li><p>purple</p></li>
+<li><p>aqua</p></li>
+<li><p>red</p></li>
+<li><p>light_purple</p></li>
+<li><p>yellow</p></li>
+<li><p>white</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.action">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used for text-component elements <cite>HoverEvent</cite> and <cite>ClickEvent</cite></p>
+<ul class="simple">
+<li><p>change_page</p></li>
+<li><p>copy</p></li>
+<li><p>open_url</p></li>
+<li><p>run_cmd</p></li>
+<li><p>suggest_cmd</p></li>
+<li><p>show_text</p></li>
+<li><p>show_item</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.key">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">key</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used for text-component element <cite>keybind</cite></p>
+<ul class="simple">
+<li><p>jump</p></li>
+<li><p>sneak</p></li>
+<li><p>sprint</p></li>
+<li><p>left</p></li>
+<li><p>right</p></li>
+<li><p>back</p></li>
+<li><p>forward</p></li>
+<li><p>attack</p></li>
+<li><p>pick_item</p></li>
+<li><p>use</p></li>
+<li><p>drop</p></li>
+<li><p>hotbar_one</p></li>
+<li><p>hotbar_two</p></li>
+<li><p>hotbar_three</p></li>
+<li><p>hotbar_four</p></li>
+<li><p>hotbar_five</p></li>
+<li><p>hotbar_six</p></li>
+<li><p>hotbar_seven</p></li>
+<li><p>hotbar_eight</p></li>
+<li><p>hotbar_nine</p></li>
+<li><p>load_toolbar_activator</p></li>
+<li><p>save_toolbar_activator</p></li>
+<li><p>player_list</p></li>
+<li><p>chat</p></li>
+<li><p>command</p></li>
+<li><p>advancements</p></li>
+<li><p>outline_spectators</p></li>
+<li><p>screenshot</p></li>
+<li><p>cinematic_camera</p></li>
+<li><p>fullscreen</p></li>
+<li><p>toggle_perspective</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.advancement_action">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">advancement_action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.advancement_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used for the <cite>action</cite> value for the <cite>attribute</cite> command</p>
+<ul class="simple">
+<li><p>grant</p></li>
+<li><p>revoke</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.selection">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">selection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used for the <cite>selection</cite> value for the <cite>attribute</cite> command</p>
+<ul class="simple">
+<li><p>everything</p></li>
+<li><p>From (<cite>from</cite> is a reserved keyword)</p></li>
+<li><p>only</p></li>
+<li><p>through</p></li>
+<li><p>until</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.position">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">position</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used in <cite>datapack enable</cite></p>
+<ul class="simple">
+<li><p>after</p></li>
+<li><p>before</p></li>
+<li><p>first</p></li>
+<li><p>last</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.difficulty">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">difficulty</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.difficulty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Difficulty list</p>
+<ul class="simple">
+<li><p>peaceful</p></li>
+<li><p>easy</p></li>
+<li><p>normal</p></li>
+<li><p>hard</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.effects">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">effects</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.effects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Effects list</p>
+<ul class="simple">
+<li><p>all</p></li>
+<li><p>absorption</p></li>
+<li><p>bad_omen</p></li>
+<li><p>blindness</p></li>
+<li><p>conduit_power</p></li>
+<li><p>dolphins_grace</p></li>
+<li><p>fire_resistance</p></li>
+<li><p>glowing</p></li>
+<li><p>haste</p></li>
+<li><p>health_boost</p></li>
+<li><p>hero_of_the_village</p></li>
+<li><p>hunger</p></li>
+<li><p>instant_damage</p></li>
+<li><p>instant_health</p></li>
+<li><p>invisibility</p></li>
+<li><p>jump_boost</p></li>
+<li><p>levitation</p></li>
+<li><p>luck</p></li>
+<li><p>mining_fatigue</p></li>
+<li><p>nausea</p></li>
+<li><p>night_vision</p></li>
+<li><p>poison</p></li>
+<li><p>regeneration</p></li>
+<li><p>resistance</p></li>
+<li><p>saturation</p></li>
+<li><p>slow_falling</p></li>
+<li><p>slowness</p></li>
+<li><p>speed</p></li>
+<li><p>strength</p></li>
+<li><p>unluck</p></li>
+<li><p>water_breathing</p></li>
+<li><p>weakness</p></li>
+<li><p>wither</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.data_operator">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">data_operator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.data_operator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used for the <cite>data</cite> command</p>
+<ul class="simple">
+<li><p>append</p></li>
+<li><p>insert</p></li>
+<li><p>merge</p></li>
+<li><p>prepend</p></li>
+<li><p>set</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.enchants">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">enchants</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.enchants" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enchantment list</p>
+<ul class="simple">
+<li><p>aqua_affinity</p></li>
+<li><p>bane_of_arthropods</p></li>
+<li><p>binding_curse</p></li>
+<li><p>blast_protection</p></li>
+<li><p>channeling</p></li>
+<li><p>depth_strider</p></li>
+<li><p>efficiency</p></li>
+<li><p>feather_falling</p></li>
+<li><p>fire_aspect</p></li>
+<li><p>fire_protection</p></li>
+<li><p>flame</p></li>
+<li><p>fortune</p></li>
+<li><p>frost_walker</p></li>
+<li><p>impaling</p></li>
+<li><p>infinity</p></li>
+<li><p>knockback</p></li>
+<li><p>looting</p></li>
+<li><p>loyalty</p></li>
+<li><p>luck_of_the_sea</p></li>
+<li><p>lure</p></li>
+<li><p>mending</p></li>
+<li><p>multishot</p></li>
+<li><p>piercing</p></li>
+<li><p>power</p></li>
+<li><p>projectile_protection</p></li>
+<li><p>protection</p></li>
+<li><p>punch</p></li>
+<li><p>quick_charge</p></li>
+<li><p>respiration</p></li>
+<li><p>riptide</p></li>
+<li><p>sharpness</p></li>
+<li><p>silk_touch</p></li>
+<li><p>smite</p></li>
+<li><p>soul_speed</p></li>
+<li><p>sweeping</p></li>
+<li><p>thorns</p></li>
+<li><p>unbreaking</p></li>
+<li><p>vanishing_curse</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.xp">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">xp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.xp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to specify experience quantity type</p>
+<ul class="simple">
+<li><p>levels</p></li>
+<li><p>points</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.rule">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">rule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gamerule list</p>
+<ul class="simple">
+<li><p>announceAdvancements</p></li>
+<li><p>commandBlockOutput</p></li>
+<li><p>disableElytraMovementCheck</p></li>
+<li><p>disableRaids</p></li>
+<li><p>doDaylightCycle</p></li>
+<li><p>doEntityDrops</p></li>
+<li><p>doFireTick</p></li>
+<li><p>doImmediateRespawn</p></li>
+<li><p>doInsomnia</p></li>
+<li><p>doLimitedCrafting</p></li>
+<li><p>doMobLoot</p></li>
+<li><p>doMobSpawning</p></li>
+<li><p>doPatrolSpawning</p></li>
+<li><p>doTileDrops</p></li>
+<li><p>doTraderSpawning</p></li>
+<li><p>doWeatherCycle</p></li>
+<li><p>drowningDamage</p></li>
+<li><p>fallDamage</p></li>
+<li><p>fireDamage</p></li>
+<li><p>forgiveDeadPlayers</p></li>
+<li><p>keepInventory</p></li>
+<li><p>logAdminCommands</p></li>
+<li><p>maxCommandChainLength</p></li>
+<li><p>maxEntityCramming</p></li>
+<li><p>mobGriefing</p></li>
+<li><p>naturalRegeneration</p></li>
+<li><p>randomTickSpeed</p></li>
+<li><p>reducedDebugInfo</p></li>
+<li><p>sendCommandFeedback</p></li>
+<li><p>showDeathMessages</p></li>
+<li><p>spawnRadius</p></li>
+<li><p>spectatorsGenerateChunks</p></li>
+<li><p>universalAnger</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.lib">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">lib</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.lib" title="Permalink to this definition">¶</a></dt>
+<dd><p>Onyx library list (mostly used internally)</p>
+<ul class="simple">
+<li><p>rng</p></li>
+<li><p>calc_xp_points</p></li>
+<li><p>math</p></li>
+<li><p>bitwise</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.scoreboard_trait">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">scoreboard_trait</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.scoreboard_trait" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifiable trait list for scoreboards</p>
+<ul class="simple">
+<li><p>displayname</p></li>
+<li><p>rendertype</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.enums.rendertype">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.enums.</code><code class="sig-name descname">rendertype</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.enums.rendertype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rendertype list for scoreboards</p>
+<ul class="simple">
+<li><p>hearts</p></li>
+<li><p>integer</p></li>
+</ul>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../execute/" class="btn btn-neutral float-right" title="onyx.execute" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../effect/" class="btn btn-neutral float-left" title="onyx.effect" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

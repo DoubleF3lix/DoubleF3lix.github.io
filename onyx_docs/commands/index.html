@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>onyx.commands &mdash; Onyx  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="oynx.data" href="../data/" />
+    <link rel="prev" title="onyx.bossbar" href="../bossbar/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home" alt="Documentation Home"> Onyx
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../bossbar/">onyx.bossbar</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">onyx.commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/">oynx.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datapack/">oynx.datapack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../effect/">onyx.effect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enums/">onyx.enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execute/">onyx.execute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experience/">onyx.experience</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../json_string/">onyx.json_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pack_manager/">onyx.pack_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scoreboard/">onyx.scoreboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selector/">onyx.selector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../util/">onyx.util</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Onyx</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>onyx.commands</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/commands.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-onyx.commands">
+<span id="onyx-commands"></span><h1>onyx.commands<a class="headerlink" href="#module-onyx.commands" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="onyx.commands.send">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">send</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmd</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes a raw commands to the function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cmd</strong> (<em>str</em>) – The command to be written</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.advancement">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">advancement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span></em>, <em class="sig-param"><span class="n">targets</span></em>, <em class="sig-param"><span class="n">advancement_selection</span></em>, <em class="sig-param"><span class="n">advancement</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.advancement" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action</strong> (<a class="reference internal" href="../enums/#onyx.enums.advancement_action" title="onyx.enums.advancement_action"><em>advancement_action</em></a>) – The action to perform (grant / revoke).</p></li>
+<li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players to act upon.</p></li>
+<li><p><strong>advancement_selection</strong> (<a class="reference internal" href="../enums/#onyx.enums.selection" title="onyx.enums.selection"><em>selection</em></a>) – The advancements area to select (everything, from, etc.).</p></li>
+<li><p><strong>advancement</strong> (<em>str</em>) – The advancement itself.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.clear">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">clear</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">targets</span></em>, <em class="sig-param"><span class="n">item</span></em>, <em class="sig-param"><span class="n">count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_namespace</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.clear" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players to clear from.</p></li>
+<li><p><strong>item</strong> (<em>str</em>) – The item to clear.</p></li>
+<li><p><strong>count</strong> (<em>int</em><em>, </em><em>optional</em>) – The amount of items to clear. Clears all if unspecified. Defaults to None.</p></li>
+<li><p><strong>auto_namespace</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not ‘minecraft:’ should be prepended to the item name. Defaults to True.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.comment">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">comment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em>, <em class="sig-param"><span class="n">preline</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">postline</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a comment to the function file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) – The comment content.</p></li>
+<li><p><strong>preline</strong> (<em>int</em><em>, </em><em>optional</em>) – The amount of blank lines before the comment. Defaults to 1.</p></li>
+<li><p><strong>postline</strong> (<em>int</em><em>, </em><em>optional</em>) – The amount of blank lines after the comment. Defaults to 0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.defaultgamemode">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">defaultgamemode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gamemode</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.defaultgamemode" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>gamemode</strong> (<a class="reference internal" href="../enums/#onyx.enums.mode" title="onyx.enums.mode"><em>mode</em></a>) – The gamemode to set to.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.difficulty">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">difficulty</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">level</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.difficulty" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>level</strong> (<a class="reference internal" href="../enums/#onyx.enums.difficulty" title="onyx.enums.difficulty"><em>difficulty</em></a>) – The difficulty to set to.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.enchant">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">enchant</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">targets</span></em>, <em class="sig-param"><span class="n">enchant_list</span></em>, <em class="sig-param"><span class="n">level</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.enchant" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players on whom the enchantment should be applied.</p></li>
+<li><p><strong>enchant_list</strong> (<em>Union</em><em>[</em><em>list</em><em>, </em><a class="reference internal" href="../enums/#onyx.enums.enchants" title="onyx.enums.enchants"><em>enchants</em></a><em>]</em>) – The enchantment to apply.</p></li>
+<li><p><strong>level</strong> (<em>int</em><em>, </em><em>optional</em>) – The level of the enchantment. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.using">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">using</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">execute_preset</span></em>, <em class="sig-param"><span class="n">cmds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.using" title="Permalink to this definition">¶</a></dt>
+<dd><p>execute</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>execute_preset</strong> (<em>execute</em>) – The preset to be used. Generated with ‘execute()’</p></li>
+<li><p><strong>cmds</strong> (<em>list</em>) – A list of commands that should be run when the condition is met.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.gamemode">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">gamemode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">targets</span></em>, <em class="sig-param"><span class="n">mode</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.gamemode" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players whose gamemode should be set.</p></li>
+<li><p><strong>mode</strong> (<a class="reference internal" href="../enums/#onyx.enums.mode" title="onyx.enums.mode"><em>mode</em></a>) – The gamemode that should be set.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.gamerule">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">gamerule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">rule</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.gamerule" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rule</strong> (<a class="reference internal" href="../enums/#onyx.enums.rule" title="onyx.enums.rule"><em>rule</em></a>) – The gamerule that should be modified.</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – The value the gamerule should be set to.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.kill">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">kill</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">targets</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.kill" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>targets</strong> (<em>slector</em>) – The entities to kill.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.say">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">say</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.say" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – The text to print.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.spectate">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">spectate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">'&#64;s'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.spectate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The entity to be spectated</p></li>
+<li><p><strong>source</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>, </em><em>optional</em>) – The entity that should spectate. Defaults to “&#64;s”.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.tellraw">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">tellraw</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">targets</span></em>, <em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.tellraw" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players to print the text to.</p></li>
+<li><p><strong>text</strong> (<a class="reference internal" href="../json_string/#onyx.json_string.json_string" title="onyx.json_string.json_string"><em>json_string</em></a>) – The text to print.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../data/" class="btn btn-neutral float-right" title="oynx.data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../bossbar/" class="btn btn-neutral float-left" title="onyx.bossbar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

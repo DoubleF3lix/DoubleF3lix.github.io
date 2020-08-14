@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>onyx.util &mdash; Onyx  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="prev" title="onyx.selector" href="../selector/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home" alt="Documentation Home"> Onyx
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../bossbar/">onyx.bossbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands/">onyx.commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/">oynx.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datapack/">oynx.datapack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../effect/">onyx.effect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enums/">onyx.enums</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../execute/">onyx.execute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experience/">onyx.experience</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../json_string/">onyx.json_string</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pack_manager/">onyx.pack_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scoreboard/">onyx.scoreboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../selector/">onyx.selector</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">onyx.util</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Onyx</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>onyx.util</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/util.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-onyx.util">
+<span id="onyx-util"></span><h1>onyx.util<a class="headerlink" href="#module-onyx.util" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="onyx.util.SetFrom">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">SetFrom</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target</span></em>, <em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">index</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">container_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.SetFrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used with data.modify() when setting from an entity</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>tuple</em><em>, </em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>]</em>) – The entity that the data should be retrieved from</p></li>
+<li><p><strong>path</strong> (<em>str</em>) – The data location</p></li>
+<li><p><strong>index</strong> (<em>int</em><em>, </em><em>optional</em>) – [description]. The index of the data. Only use if the path is a list. Defaults to None.</p></li>
+<li><p><strong>container_type</strong> (<em>str</em><em>, </em><em>optional</em>) – Override for container type (entity, storage, or block). If unspecified, the container type will be assumed based off the value for “target”. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.util.SetTo">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">SetTo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">index</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.SetTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used with data.modify() when setting to a value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>str</em>) – The value to be set.</p></li>
+<li><p><strong>index</strong> (<em>int</em><em>, </em><em>optional</em>) – The index of a list that should be modified. Only use if the path is a list. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.util.Negate">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">Negate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.Negate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Negates an argument</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>arg</strong> – The argument to negate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.util.Range">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">Range</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">min</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.Range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a scoreboard range</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>min</strong> (<em>int</em><em>, </em><em>optional</em>) – The minimum value the score should be (inclusive). If unspecified, the range will check for all scores equal to or below the maximum. Defaults to None.</p></li>
+<li><p><strong>max</strong> (<em>int</em><em>, </em><em>optional</em>) – The maximum value the score should be (inclusive). If unspecified, the range will check for all scores equal to or below the minimum. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.util.ClickEvent">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">ClickEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.ClickEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used with JSON strings</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action</strong> (<em>action_enum</em><em>, </em><em>optional</em>) – The action type.</p></li>
+<li><p><strong>value</strong> (<em>str</em><em>, </em><em>optional</em>) – The argument of the action.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.util.HoverEvent">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">HoverEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">text</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">item_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">item_tags</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.HoverEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used with JSON strings</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action</strong> (<em>action_enum</em><em>, </em><em>optional</em>) – The action type. Defaults to None.</p></li>
+<li><p><strong>text</strong> (<em>str</em><em>, </em><em>optional</em>) – The text to show on hover. Only used if “action” is set to “show_text”. Defaults to None.</p></li>
+<li><p><strong>item_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The item to show on hover. Only used if “action” is set to “show_item”. Defaults to None.</p></li>
+<li><p><strong>item_tags</strong> (<em>dict</em><em>, </em><em>optional</em>) – The tags the item should have. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.util.AbsPos">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">AbsPos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.AbsPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines an absolute position (exact coordinates)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+<li><p><strong>y</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+<li><p><strong>z</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Raised when any of the arguments is not a number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.util.RelPos">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">RelPos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.RelPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a relative position (relative to an entity, block, etc.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+<li><p><strong>y</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+<li><p><strong>z</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Raised when any of the arguments is not a number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.util.LocPos">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">LocPos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.LocPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a local position (relatve to the direction an entity is facing)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+<li><p><strong>y</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+<li><p><strong>z</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Raised when any of the arguments is not a number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.util.AbsRot">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">AbsRot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y_rot</span></em>, <em class="sig-param"><span class="n">x_rot</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.AbsRot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines an absolute rotation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_rot</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+<li><p><strong>x_rot</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Raised when any of the arguments is not a number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.util.RelRot">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">RelRot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y_rot</span></em>, <em class="sig-param"><span class="n">x_rot</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.RelRot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a relative rotation (relative to the target’s current rotation)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_rot</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+<li><p><strong>x_rot</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Raised when any of the arguments is not a number</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../selector/" class="btn btn-neutral float-left" title="onyx.selector" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+onyx
+====
+
+.. toctree::
+   :maxdepth: 2
+
+   bossbar
+   commands
+   data
+   datapack
+   effect
+   enums
+   execute
+   experience
+   json_string
+   pack_manager
+   scoreboard
+   selector
+   util
