@@ -97,9 +97,15 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">onyx.experience</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../json_string/">onyx.json_string</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pack_manager/">onyx.pack_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recipe/">onyx.recipe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedule/">onyx.schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scoreboard/">onyx.scoreboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../selector/">onyx.selector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tag/">onyx.tag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../team/">onyx.team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../title/">onyx.worldborder</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../util/">onyx.util</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../worldborder/">onyx.worldborder</a></li>
 </ul>
 
             
@@ -198,7 +204,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players to give the XP to.</p></li>
-<li><p><strong>amount</strong> (<em>str</em>) – The amount of XP. Append it with “P” for points or “L” for levels.</p></li>
+<li><p><strong>amount</strong> (<em>str</em>) – The amount of XP. Append it with <code class="docutils literal notranslate"><span class="pre">P</span></code> for points or <code class="docutils literal notranslate"><span class="pre">L</span></code> for levels.</p></li>
 </ul>
 </dd>
 </dl>
@@ -211,7 +217,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players to remove the XP from.</p></li>
-<li><p><strong>amount</strong> (<em>str</em>) – The amount of XP. Append it with “P” for points or “L” for levels.</p></li>
+<li><p><strong>amount</strong> (<em>str</em>) – The amount of XP. Append it with <code class="docutils literal notranslate"><span class="pre">P</span></code> for points or <code class="docutils literal notranslate"><span class="pre">L</span></code> for levels.</p></li>
 </ul>
 </dd>
 </dl>
@@ -224,7 +230,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players to remove the XP from.</p></li>
-<li><p><strong>amount</strong> (<em>str</em>) – The amount of XP. Append it with “P” for points or “L” for levels.</p></li>
+<li><p><strong>amount</strong> (<em>str</em>) – The amount of XP. Append it with <code class="docutils literal notranslate"><span class="pre">P</span></code> for points or <code class="docutils literal notranslate"><span class="pre">L</span></code> for levels.</p></li>
 </ul>
 </dd>
 </dl>
@@ -257,7 +263,7 @@
 <dl class="py function">
 <dt id="onyx.experience.get_total_points">
 <code class="sig-prename descclassname">onyx.experience.</code><code class="sig-name descname">get_total_points</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">targets</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.experience.get_total_points" title="Permalink to this definition">¶</a></dt>
-<dd><p>Loads the “calc_xp_points” library to calculate the total points of XP a player has</p>
+<dd><p>Loads the <code class="docutils literal notranslate"><span class="pre">calc_xp_points</span></code> library to calculate the total points of XP a player has</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players whose points should be calculated.</p>

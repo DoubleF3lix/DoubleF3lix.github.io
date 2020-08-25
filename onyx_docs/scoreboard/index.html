@@ -41,7 +41,7 @@
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
     <link rel="next" title="onyx.selector" href="../selector/" />
-    <link rel="prev" title="onyx.pack_manager" href="../pack_manager/" /> 
+    <link rel="prev" title="onyx.schedule" href="../schedule/" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,9 +97,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../experience/">onyx.experience</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../json_string/">onyx.json_string</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pack_manager/">onyx.pack_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recipe/">onyx.recipe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedule/">onyx.schedule</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">onyx.scoreboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../selector/">onyx.selector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tag/">onyx.tag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../team/">onyx.team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../title/">onyx.worldborder</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../util/">onyx.util</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../worldborder/">onyx.worldborder</a></li>
 </ul>
 
             
@@ -191,6 +197,92 @@
 </style>
 <div class="section" id="module-onyx.scoreboard">
 <span id="onyx-scoreboard"></span><h1>onyx.scoreboard<a class="headerlink" href="#module-onyx.scoreboard" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="onyx.scoreboard.resetPlayer">
+<code class="sig-prename descclassname">onyx.scoreboard.</code><code class="sig-name descname">resetPlayer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.resetPlayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets all scores for a player</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>, </em><em>str</em><em>]</em>) – The player to reset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.scoreboard.setdisplay">
+<code class="sig-prename descclassname">onyx.scoreboard.</code><code class="sig-name descname">setdisplay</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scoreboard_name</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">'sidebar'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.setdisplay" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scoreboard_name</strong> (<em>Union</em><em>[</em><a class="reference internal" href="#onyx.scoreboard.Scoreboard" title="onyx.scoreboard.Scoreboard"><em>Scoreboard</em></a><em>, </em><em>str</em><em>]</em>) – The scoreboard name</p></li>
+<li><p><strong>location</strong> (<em>str</em><em>, </em><em>optional</em>) – Where the scoreboard should be displayed. Defaults to “sidebar”.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.scoreboard.list">
+<code class="sig-prename descclassname">onyx.scoreboard.</code><code class="sig-name descname">list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the amount of scoreboards</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.scoreboard.Scoreboard">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.scoreboard.</code><code class="sig-name descname">Scoreboard</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">create</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">critera</span><span class="o">=</span><span class="default_value">'dummy'</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Scoreboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scoreboard objective object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The scoreboard name</p></li>
+<li><p><strong>create</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the scoreboard should be created. Defaults to False.</p></li>
+<li><p><strong>critera</strong> (<em>str</em><em>, </em><em>optional</em>) – The scoreboard critera. Should only be specified if <code class="docutils literal notranslate"><span class="pre">create</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">dummy</span></code>.</p></li>
+<li><p><strong>display_name</strong> (<a class="reference internal" href="../json_string/#onyx.json_string.json_string" title="onyx.json_string.json_string"><em>json_string</em></a><em>, </em><em>optional</em>) – How the scoreboard should be displayed. Should only be specified if <code class="docutils literal notranslate"><span class="pre">create</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="onyx.scoreboard.Scoreboard.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Scoreboard.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the scoreboard</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Scoreboard.modify">
+<code class="sig-name descname">modify</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trait</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Scoreboard.modify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the display name or render type
+:type trait: <a class="reference internal" href="../enums/#onyx.enums.scoreboard_trait" title="onyx.enums.scoreboard_trait"><code class="xref py py-class docutils literal notranslate"><span class="pre">scoreboard_trait</span></code></a>
+:param trait: The attribute to change
+:type trait: scoreboard_trait
+:type value: <code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<a class="reference internal" href="../json_string/#onyx.json_string.json_string" title="onyx.json_string.json_string"><code class="xref py py-class docutils literal notranslate"><span class="pre">json_string</span></code></a>, <a class="reference internal" href="../enums/#onyx.enums.rendertype" title="onyx.enums.rendertype"><code class="xref py py-class docutils literal notranslate"><span class="pre">rendertype</span></code></a>]
+:param value: The value of the new attribute
+:type value: Union[json_string, rendertype]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Scoreboard.remove_allPlayers">
+<code class="sig-name descname">remove_allPlayers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Scoreboard.remove_allPlayers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all players from a scoreboard</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Scoreboard.player">
+<code class="sig-name descname">player</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Scoreboard.player" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>, </em><em>str</em><em>]</em>) – The selector/name of the player</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A new player object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Player</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 
@@ -204,7 +296,7 @@
         <a href="../selector/" class="btn btn-neutral float-right" title="onyx.selector" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../pack_manager/" class="btn btn-neutral float-left" title="onyx.pack_manager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../schedule/" class="btn btn-neutral float-left" title="onyx.schedule" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

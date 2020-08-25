@@ -40,7 +40,8 @@
     
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
-    <link rel="prev" title="onyx.selector" href="../selector/" /> 
+    <link rel="next" title="onyx.worldborder" href="../worldborder/" />
+    <link rel="prev" title="onyx.worldborder" href="../title/" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,9 +97,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../experience/">onyx.experience</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../json_string/">onyx.json_string</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pack_manager/">onyx.pack_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recipe/">onyx.recipe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedule/">onyx.schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scoreboard/">onyx.scoreboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../selector/">onyx.selector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tag/">onyx.tag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../team/">onyx.team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../title/">onyx.worldborder</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">onyx.util</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../worldborder/">onyx.worldborder</a></li>
 </ul>
 
             
@@ -200,7 +207,7 @@
 <li><p><strong>target</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>tuple</em><em>, </em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>]</em>) – The entity that the data should be retrieved from</p></li>
 <li><p><strong>path</strong> (<em>str</em>) – The data location</p></li>
 <li><p><strong>index</strong> (<em>int</em><em>, </em><em>optional</em>) – [description]. The index of the data. Only use if the path is a list. Defaults to None.</p></li>
-<li><p><strong>container_type</strong> (<em>str</em><em>, </em><em>optional</em>) – Override for container type (entity, storage, or block). If unspecified, the container type will be assumed based off the value for “target”. Defaults to None.</p></li>
+<li><p><strong>container_type</strong> (<em>str</em><em>, </em><em>optional</em>) – Override for container type (entity, storage, or block). If unspecified, the container type will be assumed based off the value for <code class="docutils literal notranslate"><span class="pre">target</span></code>. Defaults to None.</p></li>
 </ul>
 </dd>
 </dl>
@@ -267,8 +274,8 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>action</strong> (<em>action_enum</em><em>, </em><em>optional</em>) – The action type. Defaults to None.</p></li>
-<li><p><strong>text</strong> (<em>str</em><em>, </em><em>optional</em>) – The text to show on hover. Only used if “action” is set to “show_text”. Defaults to None.</p></li>
-<li><p><strong>item_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The item to show on hover. Only used if “action” is set to “show_item”. Defaults to None.</p></li>
+<li><p><strong>text</strong> (<em>str</em><em>, </em><em>optional</em>) – The text to show on hover. Only used if <code class="docutils literal notranslate"><span class="pre">action</span></code> is set to <code class="docutils literal notranslate"><span class="pre">show_text</span></code>. Defaults to None.</p></li>
+<li><p><strong>item_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The item to show on hover. Only used if <code class="docutils literal notranslate"><span class="pre">action</span></code> is set to <code class="docutils literal notranslate"><span class="pre">show_item</span></code>. Defaults to None.</p></li>
 <li><p><strong>item_tags</strong> (<em>dict</em><em>, </em><em>optional</em>) – The tags the item should have. Defaults to None.</p></li>
 </ul>
 </dd>
@@ -330,6 +337,12 @@
 </dd></dl>
 
 <dl class="py class">
+<dt id="onyx.util.CurrentPos">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">CurrentPos</code><a class="headerlink" href="#onyx.util.CurrentPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the current position of an entity (~ ~ ~)</p>
+</dd></dl>
+
+<dl class="py class">
 <dt id="onyx.util.AbsRot">
 <em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">AbsRot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y_rot</span></em>, <em class="sig-param"><span class="n">x_rot</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.AbsRot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines an absolute rotation</p>
@@ -363,6 +376,106 @@
 </dl>
 </dd></dl>
 
+<dl class="py class">
+<dt id="onyx.util.Abs2DPos">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">Abs2DPos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x_pos</span></em>, <em class="sig-param"><span class="n">z_pos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.Abs2DPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines an absolute position without a y-coordinate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_pos</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+<li><p><strong>y_pos</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.util.Rel2DPos">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">Rel2DPos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x_pos</span></em>, <em class="sig-param"><span class="n">z_pos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.Rel2DPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines an absolute position without a y-coordinate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_pos</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+<li><p><strong>y_pos</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.util.Item">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">Item</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">item_type</span></em>, <em class="sig-param"><span class="n">item_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.Item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Item builder</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>item_type</strong> (<a class="reference internal" href="../enums/#onyx.enums.item" title="onyx.enums.item"><em>item</em></a>) – The item name (stone, brick, etc.)</p></li>
+<li><p><strong>item_name</strong> (<a class="reference internal" href="../json_string/#onyx.json_string.json_string" title="onyx.json_string.json_string"><em>json_string</em></a>) – The custom name of the item. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="onyx.util.Item.set_name">
+<code class="sig-name descname">set_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">item_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.Item.set_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the name of the item</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>item_name</strong> (<a class="reference internal" href="../json_string/#onyx.json_string.json_string" title="onyx.json_string.json_string"><em>json_string</em></a>) – The custom name of the item.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.util.Item.set_lore">
+<code class="sig-name descname">set_lore</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">lore_lines</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.Item.set_lore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites all the old lore and replaces it with new lore</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>*lore_lines</strong> (<a class="reference internal" href="../json_string/#onyx.json_string.json_string" title="onyx.json_string.json_string"><em>json_string</em></a>) – The new lore to set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.util.Item.add_lore">
+<code class="sig-name descname">add_lore</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">lore_lines</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.Item.add_lore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds to the existing item lore</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>*lore_lines</strong> (<a class="reference internal" href="../json_string/#onyx.json_string.json_string" title="onyx.json_string.json_string"><em>json_string</em></a>) – The new lore to add</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.util.Particle">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">Particle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">particle_name</span></em>, <em class="sig-param"><span class="n">position</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delta</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">speed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">count</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">motion</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">RGB</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dust_color</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dust_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">block_particle</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">item_particle</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">note_color</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">color_multiplier</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.Particle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a particle for use in particle command</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>particle_name</strong> (<a class="reference internal" href="../enums/#onyx.enums.particle" title="onyx.enums.particle"><em>particle</em></a>) – The particle type (cloud, barrier, etc.)</p></li>
+<li><p><strong>position</strong> (<a class="reference internal" href="#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><em>optional</em>) – The position of the particle. Defaults to None.</p></li>
+<li><p><strong>delta</strong> (<a class="reference internal" href="#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><em>optional</em>) – The size of the particle area. Defaults to None.</p></li>
+<li><p><strong>speed</strong> (<em>int</em><em>, </em><em>optional</em>) – How quickly the particle vanishes. Defaults to None.</p></li>
+<li><p><strong>count</strong> (<em>int</em><em>, </em><em>optional</em>) – How many particles. Defaults to None.</p></li>
+<li><p><strong>motion</strong> (<a class="reference internal" href="#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><em>optional</em>) – The motion of a particle. Sets the count to 0 and nullifies the <code class="docutils literal notranslate"><span class="pre">delta</span></code> parameter. Defaults to None.</p></li>
+<li><p><strong>RGB</strong> (<em>tuple</em><em>, </em><em>optional</em>) – Used for particle <code class="docutils literal notranslate"><span class="pre">entity_effect</span></code> and <code class="docutils literal notranslate"><span class="pre">ambient_entity_effect</span></code>. Defaults to None.</p></li>
+<li><p><strong>dust_color</strong> (<em>tuple</em><em>, </em><em>optional</em>) – The color of the <code class="docutils literal notranslate"><span class="pre">dust</span></code> particle. Only specify if <code class="docutils literal notranslate"><span class="pre">particle_name</span></code> is set to <code class="docutils literal notranslate"><span class="pre">dust</span></code>. Defaults to None.</p></li>
+<li><p><strong>dust_size</strong> (<em>int</em><em>, </em><em>optional</em>) – The size of the <code class="docutils literal notranslate"><span class="pre">dust</span></code> particle. Only specify if <code class="docutils literal notranslate"><span class="pre">dust_color</span></code> is also specified. Defaults to None.</p></li>
+<li><p><strong>block_particle</strong> (<a class="reference internal" href="../enums/#onyx.enums.block" title="onyx.enums.block"><em>block</em></a><em>, </em><em>optional</em>) – Only specify if <code class="docutils literal notranslate"><span class="pre">particle_name</span></code> is <code class="docutils literal notranslate"><span class="pre">block</span></code>. Defaults to None.</p></li>
+<li><p><strong>item_particle</strong> (<a class="reference internal" href="../enums/#onyx.enums.item" title="onyx.enums.item"><em>item</em></a><em>, </em><em>optional</em>) – Only specify if <code class="docutils literal notranslate"><span class="pre">particle_name</span></code> is <code class="docutils literal notranslate"><span class="pre">item</span></code>. Defaults to None.</p></li>
+<li><p><strong>note_color</strong> (<em>int</em><em>, </em><em>optional</em>) – Only specify if “<code class="docutils literal notranslate"><span class="pre">article_name</span></code> is set to <code class="docutils literal notranslate"><span class="pre">note</span></code>. Defaults to None.</p></li>
+<li><p><strong>color_multiplier</strong> (<em>int</em><em>, </em><em>optional</em>) – Used as an extra modifier for <code class="docutils literal notranslate"><span class="pre">RGB</span></code> and <code class="docutils literal notranslate"><span class="pre">note_color</span></code>. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -373,8 +486,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../worldborder/" class="btn btn-neutral float-right" title="onyx.worldborder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="../selector/" class="btn btn-neutral float-left" title="onyx.selector" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="../title/" class="btn btn-neutral float-left" title="onyx.worldborder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

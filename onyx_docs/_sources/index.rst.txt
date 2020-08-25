@@ -14,6 +14,12 @@ onyx
    experience
    json_string
    pack_manager
+   recipe
+   schedule
    scoreboard
    selector
+   tag
+   team
+   title
    util
+   worldborder

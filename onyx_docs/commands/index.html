@@ -97,9 +97,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../experience/">onyx.experience</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../json_string/">onyx.json_string</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pack_manager/">onyx.pack_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recipe/">onyx.recipe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedule/">onyx.schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scoreboard/">onyx.scoreboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../selector/">onyx.selector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tag/">onyx.tag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../team/">onyx.team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../title/">onyx.worldborder</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../util/">onyx.util</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../worldborder/">onyx.worldborder</a></li>
 </ul>
 
             
@@ -248,11 +254,28 @@
 </dd></dl>
 
 <dl class="py function">
+<dt id="onyx.commands.clone">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">clone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">corner1</span></em>, <em class="sig-param"><span class="n">corner2</span></em>, <em class="sig-param"><span class="n">location</span></em>, <em class="sig-param"><span class="n">mask_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">block_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clone_mode</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.clone" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>corner1</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>, </em><em>tuple</em><em>, </em><em>list</em><em>]</em>) – The first corner of the area to be cloned</p></li>
+<li><p><strong>corner2</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><em>tuple</em><em>, </em><em>list</em><em>]</em>) – The second corner of the area to be cloned</p></li>
+<li><p><strong>location</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><em>tuple</em><em>, </em><em>list</em><em>]</em>) – The location where the first corner should be cloned to</p></li>
+<li><p><strong>mask_mode</strong> (<a class="reference internal" href="../enums/#onyx.enums.mask_mode" title="onyx.enums.mask_mode"><em>mask_mode</em></a><em>, </em><em>optional</em>) – The mask mode (filtered, masked, and replace)</p></li>
+<li><p><strong>block_filter</strong> (<em>str</em><em>, </em><em>optional</em>) – The blocks to clone if <cite>mask_mode</cite> is set to <cite>filtered</cite>. Defaults to None.</p></li>
+<li><p><strong>clone_mode</strong> (<a class="reference internal" href="../enums/#onyx.enums.clone_mode" title="onyx.enums.clone_mode"><em>clone_mode</em></a><em>, </em><em>optional</em>) – The clone mode (force, move, and normal). Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt id="onyx.commands.defaultgamemode">
 <code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">defaultgamemode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gamemode</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.defaultgamemode" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>gamemode</strong> (<a class="reference internal" href="../enums/#onyx.enums.mode" title="onyx.enums.mode"><em>mode</em></a>) – The gamemode to set to.</p>
+<dd class="field-odd"><p><strong>gamemode</strong> (<a class="reference internal" href="../enums/#onyx.enums.mode" title="onyx.enums.mode"><em>mode</em></a>) – The gamemode to set to</p>
 </dd>
 </dl>
 </dd></dl>
@@ -262,7 +285,7 @@
 <code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">difficulty</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">level</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.difficulty" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>level</strong> (<a class="reference internal" href="../enums/#onyx.enums.difficulty" title="onyx.enums.difficulty"><em>difficulty</em></a>) – The difficulty to set to.</p>
+<dd class="field-odd"><p><strong>level</strong> (<a class="reference internal" href="../enums/#onyx.enums.difficulty" title="onyx.enums.difficulty"><em>difficulty</em></a>) – The difficulty to set to</p>
 </dd>
 </dl>
 </dd></dl>
@@ -273,8 +296,8 @@
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players on whom the enchantment should be applied.</p></li>
-<li><p><strong>enchant_list</strong> (<em>Union</em><em>[</em><em>list</em><em>, </em><a class="reference internal" href="../enums/#onyx.enums.enchants" title="onyx.enums.enchants"><em>enchants</em></a><em>]</em>) – The enchantment to apply.</p></li>
+<li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players on whom the enchantment should be applied</p></li>
+<li><p><strong>enchant_list</strong> (<em>Union</em><em>[</em><em>list</em><em>, </em><a class="reference internal" href="../enums/#onyx.enums.enchants" title="onyx.enums.enchants"><em>enchants</em></a><em>]</em>) – The enchantment to apply</p></li>
 <li><p><strong>level</strong> (<em>int</em><em>, </em><em>optional</em>) – The level of the enchantment. Defaults to None.</p></li>
 </ul>
 </dd>
@@ -282,15 +305,41 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="onyx.commands.using">
-<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">using</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">execute_preset</span></em>, <em class="sig-param"><span class="n">cmds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.using" title="Permalink to this definition">¶</a></dt>
-<dd><p>execute</p>
-<dl class="field-list simple">
+<dt id="onyx.commands.fill">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">fill</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">corner1</span></em>, <em class="sig-param"><span class="n">corner2</span></em>, <em class="sig-param"><span class="n">block</span></em>, <em class="sig-param"><span class="n">fill_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replace_block</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.fill" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>execute_preset</strong> (<em>execute</em>) – The preset to be used. Generated with ‘execute()’</p></li>
-<li><p><strong>cmds</strong> (<em>list</em>) – A list of commands that should be run when the condition is met.</p></li>
+<li><p><strong>corner1</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>, </em><em>tuple</em><em>, </em><em>list</em><em>]</em>) – The first corner of the area to fill</p></li>
+<li><p><strong>corner2</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>, </em><em>tuple</em><em>, </em><em>list</em><em>]</em>) – The second corner of the area to fill</p></li>
+<li><p><strong>block</strong> (<em>str</em>) – The block to fill with</p></li>
+<li><p><strong>fill_mode</strong> (<a class="reference internal" href="../enums/#onyx.enums.fill_mode" title="onyx.enums.fill_mode"><em>fill_mode</em></a><em>, </em><em>optional</em>) – The fill mode (destroy, hollow, keep, outline, and replace). Defaults to None.</p></li>
+<li><p><strong>replace_block</strong> (<em>str</em><em>, </em><em>optional</em>) – The block to replace if <code class="docutils literal notranslate"><span class="pre">fill_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">replace</span></code>. Defaults to None.</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.forceload">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">forceload</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span></em>, <em class="sig-param"><span class="n">chunk_pos1</span></em>, <em class="sig-param"><span class="n">chunk_pos2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.forceload" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mode</strong> (<a class="reference internal" href="../enums/#onyx.enums.forceload_mode" title="onyx.enums.forceload_mode"><em>forceload_mode</em></a>) – The forceload mode (add, query, and remove)</p></li>
+<li><p><strong>chunk_pos1</strong> (<em>Union</em><em>[</em><em>AbsChunkPos</em><em>, </em><em>RelChunkPos</em><em>]</em>) – The coordinates that the chunk contains</p></li>
+<li><p><strong>chunk_pos2</strong> (<em>Union</em><em>[</em><em>AbsChunkPos</em><em>, </em><em>RelChunkPos</em><em>]</em>) – The second set of coordinates that the chunk contains. Allows for forceloading an area of chunks.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.call">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">call</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.call" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>function</strong> (<em>Function</em>) – The function to call</p>
 </dd>
 </dl>
 </dd></dl>
@@ -301,8 +350,8 @@
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players whose gamemode should be set.</p></li>
-<li><p><strong>mode</strong> (<a class="reference internal" href="../enums/#onyx.enums.mode" title="onyx.enums.mode"><em>mode</em></a>) – The gamemode that should be set.</p></li>
+<li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players whose gamemode should be set</p></li>
+<li><p><strong>mode</strong> (<a class="reference internal" href="../enums/#onyx.enums.mode" title="onyx.enums.mode"><em>mode</em></a>) – The gamemode that should be set</p></li>
 </ul>
 </dd>
 </dl>
@@ -314,8 +363,22 @@
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>rule</strong> (<a class="reference internal" href="../enums/#onyx.enums.rule" title="onyx.enums.rule"><em>rule</em></a>) – The gamerule that should be modified.</p></li>
-<li><p><strong>value</strong> (<em>str</em>) – The value the gamerule should be set to.</p></li>
+<li><p><strong>rule</strong> (<a class="reference internal" href="../enums/#onyx.enums.rule" title="onyx.enums.rule"><em>rule</em></a>) – The gamerule that should be modified</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – The value the gamerule should be set to</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.give">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">give</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">targets</span></em>, <em class="sig-param"><span class="n">item</span></em>, <em class="sig-param"><span class="n">count</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.give" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players to give the item to</p></li>
+<li><p><strong>item</strong> (<a class="reference internal" href="../util/#onyx.util.Item" title="onyx.util.Item"><em>Item</em></a>) – The item to be given</p></li>
+<li><p><strong>count</strong> (<em>int</em><em>, </em><em>optional</em>) – How much of the item (up to 64). Defaults to 1.</p></li>
 </ul>
 </dd>
 </dl>
@@ -326,7 +389,74 @@
 <code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">kill</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">targets</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.kill" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>targets</strong> (<em>slector</em>) – The entities to kill.</p>
+<dd class="field-odd"><p><strong>targets</strong> (<em>slector</em>) – The entities to kill</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.locate">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">locate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">structure</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.locate" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>structure</strong> (<a class="reference internal" href="../enums/#onyx.enums.structure" title="onyx.enums.structure"><em>structure</em></a>) – The structure to locate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.locatebiome">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">locatebiome</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">biome</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.locatebiome" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>biome</strong> (<a class="reference internal" href="../enums/#onyx.enums.biome" title="onyx.enums.biome"><em>biome</em></a>) – The biome to locate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.particle">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">particle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">particle</span></em>, <em class="sig-param"><span class="n">force</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">targets</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.particle" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>particle</strong> (<a class="reference internal" href="../util/#onyx.util.Particle" title="onyx.util.Particle"><em>Particle</em></a>) – The particle itself and its attributes</p></li>
+<li><p><strong>force</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to False.</p></li>
+<li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>, </em><em>optional</em>) – The player to display the particle to. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.playsound">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">playsound</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sound</span></em>, <em class="sig-param"><span class="n">sound_channel</span></em>, <em class="sig-param"><span class="n">targets</span></em>, <em class="sig-param"><span class="n">position</span></em>, <em class="sig-param"><span class="n">volume</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">pitch</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">min_volume</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.playsound" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sound</strong> (<em>str</em>) – The sound to be played</p></li>
+<li><p><strong>sound_channel</strong> (<a class="reference internal" href="../enums/#onyx.enums.sound_channel" title="onyx.enums.sound_channel"><em>sound_channel</em></a>) – The channel the sound should be played through (music, neutral, ambient, etc.)</p></li>
+<li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players the sound should be played to</p></li>
+<li><p><strong>position</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>]</em>) – Where the sound should be played</p></li>
+<li><p><strong>volume</strong> (<em>int</em><em>, </em><em>optional</em>) – How many blocks away from the position the sound should be audible. Defaults to None.</p></li>
+<li><p><strong>pitch</strong> (<em>int</em><em>, </em><em>optional</em>) – The pitch of the sound. Defaults to None.</p></li>
+<li><p><strong>min_volume</strong> (<em>int</em><em>, </em><em>optional</em>) – The minimum volume the sound should be played at. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.replaceitem">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">replaceitem</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">container_type</span></em>, <em class="sig-param"><span class="n">container_location</span></em>, <em class="sig-param"><span class="n">slot</span></em>, <em class="sig-param"><span class="n">item</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.replaceitem" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>container_type</strong> (<a class="reference internal" href="../enums/#onyx.enums.container_type" title="onyx.enums.container_type"><em>container_type</em></a>) – The container type (block or entity)</p></li>
+<li><p><strong>container_location</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>]</em>) – The selector of the entity or the coordinates of the block to modify</p></li>
+<li><p><strong>slot</strong> (<a class="reference internal" href="../enums/#onyx.enums.container_slot" title="onyx.enums.container_slot"><em>container_slot</em></a>) – The slot to modify</p></li>
+<li><p><strong>item</strong> (<a class="reference internal" href="../util/#onyx.util.Item" title="onyx.util.Item"><em>Item</em></a>) – The item to be put into the slot</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -342,13 +472,121 @@
 </dd></dl>
 
 <dl class="py function">
+<dt id="onyx.commands.setblock">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">setblock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">position</span></em>, <em class="sig-param"><span class="n">block</span></em>, <em class="sig-param"><span class="n">setblock_mode</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.setblock" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>position</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>]</em>) – The block position</p></li>
+<li><p><strong>block</strong> (<a class="reference internal" href="../enums/#onyx.enums.block" title="onyx.enums.block"><em>block</em></a>) – The block to place</p></li>
+<li><p><strong>setblock_mode</strong> (<a class="reference internal" href="../enums/#onyx.enums.setblock_mode" title="onyx.enums.setblock_mode"><em>setblock_mode</em></a><em>, </em><em>optional</em>) – The setblock mode (destroy, keep, replace). Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.setworldspawn">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">setworldspawn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">position</span></em>, <em class="sig-param"><span class="n">angle</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.setworldspawn" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>position</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>]</em>) – The coordinates of the new spawn</p></li>
+<li><p><strong>angle</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em><em>, </em><em>optional</em>) – The Y axis the player should be facing on spawn. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.spawnpoint">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">spawnpoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">targets</span></em>, <em class="sig-param"><span class="n">position</span></em>, <em class="sig-param"><span class="n">angle</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.spawnpoint" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players whose spawn should be set</p></li>
+<li><p><strong>position</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>]</em>) – The coordinates of the new spawn</p></li>
+<li><p><strong>angle</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em><em>, </em><em>optional</em>) – The Y axis the player should be facing on spawn. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt id="onyx.commands.spectate">
 <code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">spectate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">'&#64;s'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.spectate" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>target</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The entity to be spectated</p></li>
-<li><p><strong>source</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>, </em><em>optional</em>) – The entity that should spectate. Defaults to “&#64;s”.</p></li>
+<li><p><strong>source</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>, </em><em>optional</em>) – The entity that should spectate. Defaults to <code class="docutils literal notranslate"><span class="pre">&#64;s</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.spreadplayers">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">spreadplayers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">center</span></em>, <em class="sig-param"><span class="n">spread_distance</span></em>, <em class="sig-param"><span class="n">max_spread</span></em>, <em class="sig-param"><span class="n">targets</span></em>, <em class="sig-param"><span class="n">respect_teams</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">max_height</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.spreadplayers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just like butter
+:type center: <code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<a class="reference internal" href="../util/#onyx.util.Abs2DPos" title="onyx.util.Abs2DPos"><code class="xref py py-class docutils literal notranslate"><span class="pre">Abs2DPos</span></code></a>, <a class="reference internal" href="../util/#onyx.util.Rel2DPos" title="onyx.util.Rel2DPos"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rel2DPos</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Current2DPos</span></code>]
+:param center: The center where the players should be spread around
+:type center: Union[Abs2DPos, Rel2DPos, Current2DPos]
+:type spread_distance: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
+:param spread_distance: The distance the players should be spread
+:type spread_distance: int
+:type max_spread: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
+:param max_spread: The maximum distance the players can be spread
+:type max_spread: int
+:type targets: <a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><code class="xref py py-class docutils literal notranslate"><span class="pre">selector</span></code></a>
+:param targets: The players who should be spread
+:type targets: selector
+:type respect_teams: <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>
+:param respect_teams: Defaults to False.
+:type respect_teams: bool, optional
+:type max_height: <code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]
+:param max_height: The maximum height the players should be placed on. Defaults to None.
+:type max_height: int, optional</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.stopsound">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">stopsound</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">targets</span></em>, <em class="sig-param"><span class="n">sound_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sound</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.stopsound" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players to stop the sound for</p></li>
+<li><p><strong>sound_channel</strong> (<a class="reference internal" href="../enums/#onyx.enums.sound_channel" title="onyx.enums.sound_channel"><em>sound_channel</em></a><em>, </em><em>optional</em>) – The sound channel the sound is playing in. If unspecified, all sounds are stopped. Defaults to None.</p></li>
+<li><p><strong>sound</strong> (<em>str</em><em>, </em><em>optional</em>) – The sound to stop. If unspecified, all sounds in the specified sound channel are stopped. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.summon">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">summon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">entity</span></em>, <em class="sig-param"><span class="n">position</span></em>, <em class="sig-param"><span class="n">nbt</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.summon" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity</strong> (<a class="reference internal" href="../enums/#onyx.enums.entity" title="onyx.enums.entity"><em>entity</em></a>) – The entity type to summon</p></li>
+<li><p><strong>position</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>]</em>) – The position to spawn the entity at</p></li>
+<li><p><strong>nbt</strong> (<em>str</em><em>, </em><em>optional</em>) – The NBT of the entity. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.teleport">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">teleport</code><span class="sig-paren">(</span><em class="sig-param">targets</em>, <em class="sig-param">destination</em>, <em class="sig-param">facing=None</em>, <em class="sig-param">facing_type=&lt;container_type.entity: 'entity'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.teleport" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The targets to teleport</p></li>
+<li><p><strong>destination</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>]</em>) – The location to teleport the player.</p></li>
+<li><p><strong>facing</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>]</em><em>, </em><em>optional</em>) – The location to face. Defaults to None.</p></li>
+<li><p><strong>facing_type</strong> (<a class="reference internal" href="../enums/#onyx.enums.container_type" title="onyx.enums.container_type"><em>container_type</em></a><em>, </em><em>optional</em>) – Automatically assigned based on the parameter for <code class="docutils literal notranslate"><span class="pre">facing</span></code>. Override when results aren’t as expected. Defaults to container_type.entity.</p></li>
 </ul>
 </dd>
 </dl>
@@ -363,6 +601,16 @@
 <li><p><strong>targets</strong> (<a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a>) – The players to print the text to.</p></li>
 <li><p><strong>text</strong> (<a class="reference internal" href="../json_string/#onyx.json_string.json_string" title="onyx.json_string.json_string"><em>json_string</em></a>) – The text to print.</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onyx.commands.weather">
+<code class="sig-prename descclassname">onyx.commands.</code><code class="sig-name descname">weather</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">weather_mode</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.commands.weather" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>weather_mode</strong> (<a class="reference internal" href="../enums/#onyx.enums.weather" title="onyx.enums.weather"><em>weather</em></a>) – The weather type (clear, rain, thunder)</p>
 </dd>
 </dl>
 </dd></dl>

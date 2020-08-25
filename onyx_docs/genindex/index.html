@@ -95,9 +95,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../experience/">onyx.experience</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../json_string/">onyx.json_string</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pack_manager/">onyx.pack_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recipe/">onyx.recipe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../schedule/">onyx.schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scoreboard/">onyx.scoreboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../selector/">onyx.selector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tag/">onyx.tag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../team/">onyx.team</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../title/">onyx.worldborder</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../util/">onyx.util</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../worldborder/">onyx.worldborder</a></li>
 </ul>
 
             
@@ -170,8 +176,10 @@
  | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
  | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
  | <a href="#G"><strong>G</strong></a>
  | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
  | <a href="#J"><strong>J</strong></a>
  | <a href="#K"><strong>K</strong></a>
  | <a href="#L"><strong>L</strong></a>
@@ -182,13 +190,15 @@
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
- | <a href="#U"><strong>U</strong></a>
+ | <a href="#W"><strong>W</strong></a>
  | <a href="#X"><strong>X</strong></a>
  
 </div>
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../util/#onyx.util.Abs2DPos">Abs2DPos (class in onyx.util)</a>
+</li>
       <li><a href="../util/#onyx.util.AbsPos">AbsPos (class in onyx.util)</a>
 </li>
       <li><a href="../util/#onyx.util.AbsRot">AbsRot (class in onyx.util)</a>
@@ -196,9 +206,19 @@
       <li><a href="../enums/#onyx.enums.action">action (class in onyx.enums)</a>
 </li>
       <li><a href="../experience/#onyx.experience.add">add() (in module onyx.experience)</a>
+
+      <ul>
+        <li><a href="../schedule/#onyx.schedule.add">(in module onyx.schedule)</a>
 </li>
+        <li><a href="../tag/#onyx.tag.add">(in module onyx.tag)</a>
+</li>
+        <li><a href="../title/#onyx.worldborder.add">(in module onyx.worldborder)</a>, <a href="../worldborder/#onyx.worldborder.add">[1]</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../util/#onyx.util.Item.add_lore">add_lore() (onyx.util.Item method)</a>
+</li>
       <li><a href="../commands/#onyx.commands.advancement">advancement() (in module onyx.commands)</a>
 </li>
       <li><a href="../enums/#onyx.enums.advancement_action">advancement_action (class in onyx.enums)</a>
@@ -215,6 +235,16 @@
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../enums/#onyx.enums.biome">biome (class in onyx.enums)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.block">block (class in onyx.enums)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../enums/#onyx.enums.border_damage">border_damage (class in onyx.enums)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.border_warning">border_warning (class in onyx.enums)</a>
+</li>
       <li><a href="../enums/#onyx.enums.bossbar_trait">bossbar_trait (class in onyx.enums)</a>
 </li>
   </ul></td>
@@ -223,21 +253,41 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../commands/#onyx.commands.call">call() (in module onyx.commands)</a>
+</li>
       <li><a href="../commands/#onyx.commands.clear">clear() (in module onyx.commands)</a>
 
       <ul>
         <li><a href="../effect/#onyx.effect.clear">(in module onyx.effect)</a>
 </li>
+        <li><a href="../schedule/#onyx.schedule.clear">(in module onyx.schedule)</a>
+</li>
       </ul></li>
       <li><a href="../util/#onyx.util.ClickEvent">ClickEvent (class in onyx.util)</a>
 </li>
+      <li><a href="../commands/#onyx.commands.clone">clone() (in module onyx.commands)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.clone_mode">clone_mode (class in onyx.enums)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../enums/#onyx.enums.collision_rule">collision_rule (class in onyx.enums)</a>
+</li>
       <li><a href="../enums/#onyx.enums.color">color (class in onyx.enums)</a>
 </li>
       <li><a href="../commands/#onyx.commands.comment">comment() (in module onyx.commands)</a>
 </li>
+      <li><a href="../enums/#onyx.enums.container_slot">container_slot (class in onyx.enums)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.container_type">container_type (class in onyx.enums)</a>
+</li>
       <li><a href="../bossbar/#onyx.bossbar.create">create() (in module onyx.bossbar)</a>
+
+      <ul>
+        <li><a href="../team/#onyx.team.create">(in module onyx.team)</a>
+</li>
+      </ul></li>
+      <li><a href="../util/#onyx.util.CurrentPos">CurrentPos (class in onyx.util)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -245,12 +295,24 @@
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../title/#onyx.worldborder.damage">damage() (in module onyx.worldborder)</a>, <a href="../worldborder/#onyx.worldborder.damage">[1]</a>
+</li>
       <li><a href="../enums/#onyx.enums.data_operator">data_operator (class in onyx.enums)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.data_type">data_type (class in onyx.enums)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.death_message_visibility">death_message_visibility (class in onyx.enums)</a>
 </li>
       <li><a href="../commands/#onyx.commands.defaultgamemode">defaultgamemode() (in module onyx.commands)</a>
 </li>
       <li><a href="../bossbar/#onyx.bossbar.delete">delete() (in module onyx.bossbar)</a>
+
+      <ul>
+        <li><a href="../team/#onyx.team.delete">(in module onyx.team)</a>
 </li>
+        <li><a href="../scoreboard/#onyx.scoreboard.Scoreboard.delete">(onyx.scoreboard.Scoreboard method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../enums/#onyx.enums.difficulty">difficulty (class in onyx.enums)</a>
@@ -269,6 +331,8 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../enums/#onyx.enums.effects">effects (class in onyx.enums)</a>
 </li>
+      <li><a href="../team/#onyx.team.empty">empty() (in module onyx.team)</a>
+</li>
       <li><a href="../datapack/#onyx.datapack.enable">enable() (in module onyx.datapack)</a>
 </li>
   </ul></td>
@@ -276,6 +340,26 @@
       <li><a href="../commands/#onyx.commands.enchant">enchant() (in module onyx.commands)</a>
 </li>
       <li><a href="../enums/#onyx.enums.enchants">enchants (class in onyx.enums)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.entity">entity (class in onyx.enums)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../commands/#onyx.commands.fill">fill() (in module onyx.commands)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.fill_mode">fill_mode (class in onyx.enums)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../commands/#onyx.commands.forceload">forceload() (in module onyx.commands)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.forceload_mode">forceload_mode (class in onyx.enums)</a>
+</li>
+      <li><a href="../pack_manager/#onyx.pack_manager.pack.function">function() (onyx.pack_manager.pack method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -292,6 +376,8 @@
       <ul>
         <li><a href="../experience/#onyx.experience.get">(in module onyx.experience)</a>
 </li>
+        <li><a href="../title/#onyx.worldborder.get">(in module onyx.worldborder)</a>, <a href="../worldborder/#onyx.worldborder.get">[1]</a>
+</li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -299,8 +385,16 @@
 </li>
       <li><a href="../bossbar/#onyx.bossbar.get_trait">get_trait() (in module onyx.bossbar)</a>
 </li>
-      <li><a href="../effect/#onyx.effect.give">give() (in module onyx.effect)</a>
+      <li><a href="../commands/#onyx.commands.give">give() (in module onyx.commands)</a>
+
+      <ul>
+        <li><a href="../effect/#onyx.effect.give">(in module onyx.effect)</a>
 </li>
+        <li><a href="../loot/#onyx.loot.give">(in module onyx.loot)</a>
+</li>
+        <li><a href="../recipe/#onyx.recipe.give">(in module onyx.recipe)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -312,8 +406,26 @@
   </ul></td>
 </tr></table>
 
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../loot/#onyx.loot.insert">insert() (in module onyx.loot)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../enums/#onyx.enums.item">item (class in onyx.enums)</a>
+</li>
+      <li><a href="../util/#onyx.util.Item">Item (class in onyx.util)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="J">J</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../team/#onyx.team.join">join() (in module onyx.team)</a>
+</li>
+  </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../json_string/#onyx.json_string.json_string">json_string (class in onyx.json_string)</a>
 </li>
@@ -335,11 +447,27 @@
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../team/#onyx.team.leave">leave() (in module onyx.team)</a>
+</li>
       <li><a href="../enums/#onyx.enums.lib">lib (class in onyx.enums)</a>
 </li>
+      <li><a href="../scoreboard/#onyx.scoreboard.list">list() (in module onyx.scoreboard)</a>
+
+      <ul>
+        <li><a href="../tag/#onyx.tag.list">(in module onyx.tag)</a>
+</li>
+        <li><a href="../team/#onyx.team.list">(in module onyx.team)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../commands/#onyx.commands.locate">locate() (in module onyx.commands)</a>
+</li>
+      <li><a href="../commands/#onyx.commands.locatebiome">locatebiome() (in module onyx.commands)</a>
+</li>
       <li><a href="../util/#onyx.util.LocPos">LocPos (class in onyx.util)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.loot_type">loot_type (class in onyx.enums)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -347,6 +475,8 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../enums/#onyx.enums.mask_mode">mask_mode (class in onyx.enums)</a>
+</li>
       <li><a href="../data/#onyx.data.merge">merge() (in module onyx.data)</a>
 </li>
       <li><a href="../enums/#onyx.enums.mode">mode (class in onyx.enums)</a>
@@ -354,6 +484,10 @@
       <li><a href="../data/#onyx.data.modify">modify() (in module onyx.data)</a>
 
       <ul>
+        <li><a href="../team/#onyx.team.modify">(in module onyx.team)</a>
+</li>
+        <li><a href="../scoreboard/#onyx.scoreboard.Scoreboard.modify">(onyx.scoreboard.Scoreboard method)</a>
+</li>
         <li><a href="../selector/#onyx.selector.selector.modify">(onyx.selector.selector method)</a>
 </li>
       </ul></li>
@@ -369,6 +503,8 @@
 </li>
         <li><a href="../datapack/#module-onyx.datapack">onyx.datapack</a>
 </li>
+        <li><a href="../delay/#module-onyx.delay">onyx.delay</a>
+</li>
         <li><a href="../effect/#module-onyx.effect">onyx.effect</a>
 </li>
         <li><a href="../enums/#module-onyx.enums">onyx.enums</a>
@@ -379,13 +515,25 @@
 </li>
         <li><a href="../json_string/#module-onyx.json_string">onyx.json_string</a>
 </li>
+        <li><a href="../loot/#module-onyx.loot">onyx.loot</a>
+</li>
         <li><a href="../pack_manager/#module-onyx.pack_manager">onyx.pack_manager</a>
+</li>
+        <li><a href="../recipe/#module-onyx.recipe">onyx.recipe</a>
+</li>
+        <li><a href="../schedule/#module-onyx.schedule">onyx.schedule</a>
 </li>
         <li><a href="../scoreboard/#module-onyx.scoreboard">onyx.scoreboard</a>
 </li>
         <li><a href="../selector/#module-onyx.selector">onyx.selector</a>
 </li>
+        <li><a href="../tag/#module-onyx.tag">onyx.tag</a>
+</li>
+        <li><a href="../team/#module-onyx.team">onyx.team</a>
+</li>
         <li><a href="../util/#module-onyx.util">onyx.util</a>
+</li>
+        <li><a href="../title/#module-onyx.worldborder">onyx.worldborder</a>, <a href="../worldborder/#module-onyx.worldborder">[1]</a>
 </li>
       </ul></li>
   </ul></td>
@@ -393,6 +541,10 @@
 
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../enums/#onyx.enums.nametag_visibility">nametag_visibility (class in onyx.enums)</a>
+</li>
+  </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../util/#onyx.util.Negate">Negate (class in onyx.util)</a>
 </li>
@@ -431,6 +583,13 @@
 </li>
       </ul></li>
       <li>
+    onyx.delay
+
+      <ul>
+        <li><a href="../delay/#module-onyx.delay">module</a>
+</li>
+      </ul></li>
+      <li>
     onyx.effect
 
       <ul>
@@ -451,8 +610,6 @@
         <li><a href="../execute/#module-onyx.execute">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     onyx.experience
 
@@ -467,11 +624,34 @@
         <li><a href="../json_string/#module-onyx.json_string">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    onyx.loot
+
+      <ul>
+        <li><a href="../loot/#module-onyx.loot">module</a>
+</li>
+      </ul></li>
       <li>
     onyx.pack_manager
 
       <ul>
         <li><a href="../pack_manager/#module-onyx.pack_manager">module</a>
+</li>
+      </ul></li>
+      <li>
+    onyx.recipe
+
+      <ul>
+        <li><a href="../recipe/#module-onyx.recipe">module</a>
+</li>
+      </ul></li>
+      <li>
+    onyx.schedule
+
+      <ul>
+        <li><a href="../schedule/#module-onyx.schedule">module</a>
 </li>
       </ul></li>
       <li>
@@ -489,10 +669,31 @@
 </li>
       </ul></li>
       <li>
+    onyx.tag
+
+      <ul>
+        <li><a href="../tag/#module-onyx.tag">module</a>
+</li>
+      </ul></li>
+      <li>
+    onyx.team
+
+      <ul>
+        <li><a href="../team/#module-onyx.team">module</a>
+</li>
+      </ul></li>
+      <li>
     onyx.util
 
       <ul>
         <li><a href="../util/#module-onyx.util">module</a>
+</li>
+      </ul></li>
+      <li>
+    onyx.worldborder
+
+      <ul>
+        <li><a href="../title/#module-onyx.worldborder">module</a>, <a href="../worldborder/#module-onyx.worldborder">[1]</a>
 </li>
       </ul></li>
   </ul></td>
@@ -501,6 +702,20 @@
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../pack_manager/#onyx.pack_manager.pack">pack (class in onyx.pack_manager)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.particle">particle (class in onyx.enums)</a>
+</li>
+      <li><a href="../util/#onyx.util.Particle">Particle (class in onyx.util)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../commands/#onyx.commands.particle">particle() (in module onyx.commands)</a>
+</li>
+      <li><a href="../scoreboard/#onyx.scoreboard.Scoreboard.player">player() (onyx.scoreboard.Scoreboard method)</a>
+</li>
+      <li><a href="../commands/#onyx.commands.playsound">playsound() (in module onyx.commands)</a>
+</li>
       <li><a href="../enums/#onyx.enums.position">position (class in onyx.enums)</a>
 </li>
   </ul></td>
@@ -511,6 +726,10 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../util/#onyx.util.Range">Range (class in onyx.util)</a>
 </li>
+      <li><a href="../enums/#onyx.enums.recipes">recipes (class in onyx.enums)</a>
+</li>
+      <li><a href="../util/#onyx.util.Rel2DPos">Rel2DPos (class in onyx.util)</a>
+</li>
       <li><a href="../util/#onyx.util.RelPos">RelPos (class in onyx.util)</a>
 </li>
       <li><a href="../util/#onyx.util.RelRot">RelRot (class in onyx.util)</a>
@@ -520,12 +739,22 @@
       <ul>
         <li><a href="../experience/#onyx.experience.remove">(in module onyx.experience)</a>
 </li>
+        <li><a href="../tag/#onyx.tag.remove">(in module onyx.tag)</a>
+</li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../scoreboard/#onyx.scoreboard.Scoreboard.remove_allPlayers">remove_allPlayers() (onyx.scoreboard.Scoreboard method)</a>
+</li>
       <li><a href="../enums/#onyx.enums.rendertype">rendertype (class in onyx.enums)</a>
 </li>
+      <li><a href="../loot/#onyx.loot.replace">replace() (in module onyx.loot)</a>
+</li>
+      <li><a href="../commands/#onyx.commands.replaceitem">replaceitem() (in module onyx.commands)</a>
+</li>
       <li><a href="../experience/#onyx.experience.reset">reset() (in module onyx.experience)</a>
+</li>
+      <li><a href="../scoreboard/#onyx.scoreboard.resetPlayer">resetPlayer() (in module onyx.scoreboard)</a>
 </li>
       <li><a href="../enums/#onyx.enums.rule">rule (class in onyx.enums)</a>
 </li>
@@ -537,6 +766,12 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../commands/#onyx.commands.say">say() (in module onyx.commands)</a>
 </li>
+      <li><a href="../enums/#onyx.enums.schedule_mode">schedule_mode (class in onyx.enums)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.score_operator">score_operator (class in onyx.enums)</a>
+</li>
+      <li><a href="../scoreboard/#onyx.scoreboard.Scoreboard">Scoreboard (class in onyx.scoreboard)</a>
+</li>
       <li><a href="../enums/#onyx.enums.scoreboard_trait">scoreboard_trait (class in onyx.enums)</a>
 </li>
       <li><a href="../enums/#onyx.enums.selection">selection (class in onyx.enums)</a>
@@ -546,20 +781,56 @@
       <li><a href="../commands/#onyx.commands.send">send() (in module onyx.commands)</a>
 </li>
       <li><a href="../experience/#onyx.experience.set">set() (in module onyx.experience)</a>
+
+      <ul>
+        <li><a href="../title/#onyx.worldborder.set">(in module onyx.worldborder)</a>, <a href="../worldborder/#onyx.worldborder.set">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="../title/#onyx.worldborder.set_center">set_center() (in module onyx.worldborder)</a>, <a href="../worldborder/#onyx.worldborder.set_center">[1]</a>
+</li>
+      <li><a href="../util/#onyx.util.Item.set_lore">set_lore() (onyx.util.Item method)</a>
+</li>
+      <li><a href="../util/#onyx.util.Item.set_name">set_name() (onyx.util.Item method)</a>
+</li>
+      <li><a href="../bossbar/#onyx.bossbar.set_trait">set_trait() (in module onyx.bossbar)</a>
+</li>
+      <li><a href="../title/#onyx.worldborder.set_warning">set_warning() (in module onyx.worldborder)</a>, <a href="../worldborder/#onyx.worldborder.set_warning">[1]</a>
+</li>
+      <li><a href="../commands/#onyx.commands.setblock">setblock() (in module onyx.commands)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="../bossbar/#onyx.bossbar.set_trait">set_trait() (in module onyx.bossbar)</a>
+      <li><a href="../enums/#onyx.enums.setblock_mode">setblock_mode (class in onyx.enums)</a>
+</li>
+      <li><a href="../scoreboard/#onyx.scoreboard.setdisplay">setdisplay() (in module onyx.scoreboard)</a>
 </li>
       <li><a href="../util/#onyx.util.SetFrom">SetFrom (class in onyx.util)</a>
 </li>
       <li><a href="../util/#onyx.util.SetTo">SetTo (class in onyx.util)</a>
 </li>
+      <li><a href="../commands/#onyx.commands.setworldspawn">setworldspawn() (in module onyx.commands)</a>
+</li>
       <li><a href="../enums/#onyx.enums.sort">sort (class in onyx.enums)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.sound_channel">sound_channel (class in onyx.enums)</a>
+</li>
+      <li><a href="../loot/#onyx.loot.spawn">spawn() (in module onyx.loot)</a>
+</li>
+      <li><a href="../commands/#onyx.commands.spawnpoint">spawnpoint() (in module onyx.commands)</a>
 </li>
       <li><a href="../commands/#onyx.commands.spectate">spectate() (in module onyx.commands)</a>
 </li>
+      <li><a href="../commands/#onyx.commands.spreadplayers">spreadplayers() (in module onyx.commands)</a>
+</li>
+      <li><a href="../commands/#onyx.commands.stopsound">stopsound() (in module onyx.commands)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.store_type">store_type (class in onyx.enums)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.structure">structure (class in onyx.enums)</a>
+</li>
       <li><a href="../enums/#onyx.enums.style">style (class in onyx.enums)</a>
+</li>
+      <li><a href="../commands/#onyx.commands.summon">summon() (in module onyx.commands)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -567,15 +838,27 @@
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../recipe/#onyx.recipe.take">take() (in module onyx.recipe)</a>
+</li>
+      <li><a href="../enums/#onyx.enums.team_trait">team_trait (class in onyx.enums)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../commands/#onyx.commands.teleport">teleport() (in module onyx.commands)</a>
+</li>
       <li><a href="../commands/#onyx.commands.tellraw">tellraw() (in module onyx.commands)</a>
 </li>
   </ul></td>
 </tr></table>
 
-<h2 id="U">U</h2>
+<h2 id="W">W</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="../commands/#onyx.commands.using">using() (in module onyx.commands)</a>
+      <li><a href="../enums/#onyx.enums.weather">weather (class in onyx.enums)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../commands/#onyx.commands.weather">weather() (in module onyx.commands)</a>
 </li>
   </ul></td>
 </tr></table>
