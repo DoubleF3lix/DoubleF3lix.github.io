@@ -210,6 +210,17 @@
 </dd>
 </dl>
 <dl class="py method">
+<dt id="onyx.pack_manager.pack.get_generation_time">
+<code class="sig-name descname">get_generation_time</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">decimal_places</span><span class="o">=</span><span class="default_value">3</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.pack_manager.pack.get_generation_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints the time it took to generate the datapack</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>decimal_places</strong> (<em>int</em><em>, </em><em>optional</em>) – The amount of decimal places the result should be rounded to. Defaults to 3.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="onyx.pack_manager.pack.function">
 <code class="sig-name descname">function</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function_path</span></em>, <em class="sig-param"><span class="n">function_name</span></em>, <em class="sig-param"><span class="n">loop</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.pack_manager.pack.function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines a new function</p>
@@ -219,6 +230,127 @@
 <li><p><strong>function_path</strong> (<em>str</em>) – The path of the function relative to the datapack <code class="docutils literal notranslate"><span class="pre">functions</span></code> folder</p></li>
 <li><p><strong>function_name</strong> (<em>str</em>) – The name of the function</p></li>
 <li><p><strong>loop</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the function should be added to tick.json. Defaults to False.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.pack_manager.pack.add_advancement">
+<code class="sig-name descname">add_advancement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.pack_manager.pack.add_advancement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an advancement to the datapack from raw JSON data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – The location of the advancement relative to <code class="docutils literal notranslate"><span class="pre">namespace/advancements</span></code>. Specify the advancement name in the <code class="docutils literal notranslate"><span class="pre">name</span></code> parameter.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the advancement</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – The JSON data of the advancement</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the advancement should be put in the <code class="docutils literal notranslate"><span class="pre">minecraft</span></code> namespace. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The path of the advancement that minecraft uses (<code class="docutils literal notranslate"><span class="pre">namespace:pa/th/name</span></code>)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.pack_manager.pack.add_loot_table">
+<code class="sig-name descname">add_loot_table</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.pack_manager.pack.add_loot_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a loot table to the datapack from raw JSON data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – The location of the loot table relative to <code class="docutils literal notranslate"><span class="pre">namespace/loot_tables</span></code>. Specify the loot table name in the <code class="docutils literal notranslate"><span class="pre">name</span></code> parameter.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the loot table</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – The JSON data of the loot table</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the loot table should be put in the <code class="docutils literal notranslate"><span class="pre">minecraft</span></code> namespace. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The path of the loot table that minecraft uses (<code class="docutils literal notranslate"><span class="pre">namespace:pa/th/name</span></code>)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.pack_manager.pack.add_predicate">
+<code class="sig-name descname">add_predicate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.pack_manager.pack.add_predicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a predicate to the datapack from raw JSON data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – The location of the predicate relative to <code class="docutils literal notranslate"><span class="pre">namespace/predicates</span></code>. Specify the predicate name in the <code class="docutils literal notranslate"><span class="pre">name</span></code> parameter.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the predicate</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – The JSON data of the predicate</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the predicate should be put in the <code class="docutils literal notranslate"><span class="pre">minecraft</span></code> namespace. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The path of the predicate that minecraft uses (<code class="docutils literal notranslate"><span class="pre">namespace:pa/th/name</span></code>)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.pack_manager.pack.add_recipe">
+<code class="sig-name descname">add_recipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.pack_manager.pack.add_recipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a recipe to the datapack from raw JSON data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – The location of the recipe relative to <code class="docutils literal notranslate"><span class="pre">namespace/recipes</span></code>. Specify the recipe name in the <code class="docutils literal notranslate"><span class="pre">name</span></code> parameter.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the recipe</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – The JSON data of the recipe</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the recipe should be put in the <code class="docutils literal notranslate"><span class="pre">minecraft</span></code> namespace. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The path of the recipe that minecraft uses (<code class="docutils literal notranslate"><span class="pre">namespace:pa/th/name</span></code>)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.pack_manager.pack.load_structure">
+<code class="sig-name descname">load_structure</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">location</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.pack_manager.pack.load_structure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies a structure into the datapack</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – The location of the structure relative to <code class="docutils literal notranslate"><span class="pre">namespace/structures</span></code>. Specify the structure name in the <code class="docutils literal notranslate"><span class="pre">name</span></code> parameter.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the structure</p></li>
+<li><p><strong>location</strong> (<em>str</em>) – The file path of the structure to load</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the structure should be loaded into the <code class="docutils literal notranslate"><span class="pre">minecraft</span></code> namespace. Defaults to False.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.pack_manager.pack.add_tag">
+<code class="sig-name descname">add_tag</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">type</span></em>, <em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.pack_manager.pack.add_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a tag to the datapack from raw JSON data or a list of elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<a class="reference internal" href="../enums/#onyx.enums.tag_type" title="onyx.enums.tag_type"><em>tag_type</em></a>) – The type of the tag (block, entity, fluid, function, item)</p></li>
+<li><p><strong>path</strong> (<em>str</em>) – The location of the tag relative to <code class="docutils literal notranslate"><span class="pre">namespace/tags</span></code>. Specify the tag name in the <code class="docutils literal notranslate"><span class="pre">name</span></code> parameter.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the tag</p></li>
+<li><p><strong>data</strong> (<em>Union</em><em>[</em><em>dict</em><em>, </em><em>list</em><em>]</em>) – The data of the tag. If <code class="docutils literal notranslate"><span class="pre">data</span></code> is a dictionary, the raw JSON data is loaded. If <code class="docutils literal notranslate"><span class="pre">data</span></code> is a list, the list will be set to the <code class="docutils literal notranslate"><span class="pre">values</span></code> element of the tag.</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the tag should be loaded into the <code class="docutils literal notranslate"><span class="pre">minecraft</span></code> namespace. Defaults to False.</p></li>
 </ul>
 </dd>
 </dl>

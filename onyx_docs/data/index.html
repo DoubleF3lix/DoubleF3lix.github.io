@@ -204,7 +204,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>target</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>tuple</em><em>, </em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>]</em>) – The target(s) to get the data from.</p></li>
+<li><p><strong>target</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>, </em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>]</em>) – The target(s) to get the data from.</p></li>
 <li><p><strong>path</strong> (<em>str</em><em>, </em><em>optional</em>) – The data to retrieve. By default, this will get everything. Defaults to None.</p></li>
 <li><p><strong>scale</strong> (<em>Union</em><em>[</em><em>float</em><em>, </em><em>int</em><em>]</em><em>, </em><em>optional</em>) – The scale in which to retrieve the data (With a scale of 0.01, 100 =&gt; 1). Defaults to None.</p></li>
 </ul>
@@ -219,7 +219,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>target</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>tuple</em><em>, </em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>]</em>) – The target(s) to modify the data of.</p></li>
+<li><p><strong>target</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>, </em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>]</em>) – The target(s) to modify the data of.</p></li>
 <li><p><strong>nbt</strong> (<em>str</em>) – The data to merge.</p></li>
 </ul>
 </dd>
@@ -233,7 +233,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>target</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>tuple</em><em>, </em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>]</em>) – The target(s) to modify the data of.</p></li>
+<li><p><strong>target</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>, </em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>]</em>) – The target(s) to modify the data of.</p></li>
 <li><p><strong>path</strong> (<em>str</em>) – The name of the data location that should be modified.</p></li>
 <li><p><strong>operation</strong> (<a class="reference internal" href="../enums/#onyx.enums.data_operator" title="onyx.enums.data_operator"><em>data_operator</em></a>) – How the data should be modified.</p></li>
 <li><p><strong>data_location</strong> (<em>dict</em>) – The data that should be set.</p></li>
@@ -249,7 +249,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>target</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>tuple</em><em>, </em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>]</em>) – The target(s) to remove the entity from.</p></li>
+<li><p><strong>target</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="../util/#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.RelPos" title="onyx.util.RelPos"><em>RelPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.LocPos" title="onyx.util.LocPos"><em>LocPos</em></a><em>, </em><a class="reference internal" href="../util/#onyx.util.CurrentPos" title="onyx.util.CurrentPos"><em>CurrentPos</em></a><em>, </em><a class="reference internal" href="../selector/#onyx.selector.selector" title="onyx.selector.selector"><em>selector</em></a><em>]</em>) – The target(s) to remove the entity from.</p></li>
 <li><p><strong>path</strong> (<em>str</em>) – The piece of data to remove.</p></li>
 </ul>
 </dd>

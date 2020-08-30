@@ -320,14 +320,14 @@
 
 <dl class="py class">
 <dt id="onyx.util.LocPos">
-<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">LocPos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.LocPos" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">LocPos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">left</span></em>, <em class="sig-param"><span class="n">up</span></em>, <em class="sig-param"><span class="n">forward</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.LocPos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines a local position (relatve to the direction an entity is facing)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
-<li><p><strong>y</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
-<li><p><strong>z</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+<li><p><strong>left</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+<li><p><strong>up</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
+<li><p><strong>forward</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) – </p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises</dt>
@@ -338,8 +338,12 @@
 
 <dl class="py class">
 <dt id="onyx.util.CurrentPos">
-<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">CurrentPos</code><a class="headerlink" href="#onyx.util.CurrentPos" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the current position of an entity (~ ~ ~)</p>
+<em class="property">class </em><code class="sig-prename descclassname">onyx.util.</code><code class="sig-name descname">CurrentPos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">rotation</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.util.CurrentPos" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rotation</strong> (<em>bool</em>) – Whether or not rotation should be included in this position (~ ~ ~ ~ ~). Defaults to False.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py class">
@@ -458,7 +462,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>particle_name</strong> (<a class="reference internal" href="../enums/#onyx.enums.particle" title="onyx.enums.particle"><em>particle</em></a>) – The particle type (cloud, barrier, etc.)</p></li>
+<li><p><strong>particle_name</strong> (<em>particle</em>) – The particle type (cloud, barrier, etc.)</p></li>
 <li><p><strong>position</strong> (<a class="reference internal" href="#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><em>optional</em>) – The position of the particle. Defaults to None.</p></li>
 <li><p><strong>delta</strong> (<a class="reference internal" href="#onyx.util.AbsPos" title="onyx.util.AbsPos"><em>AbsPos</em></a><em>, </em><em>optional</em>) – The size of the particle area. Defaults to None.</p></li>
 <li><p><strong>speed</strong> (<em>int</em><em>, </em><em>optional</em>) – How quickly the particle vanishes. Defaults to None.</p></li>
