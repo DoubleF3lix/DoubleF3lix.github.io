@@ -61,4 +61,4 @@ Depending on your version, you may need to edit the `pack_format`. See the table
     </tr>
 </table>
 Once your basic datapack is finished, load your world and type `/datapack list` in chat. Note that the `data` folder is not required to make a datapack, but it is required for all content. <br>
-If you see something like `[vanilla (built-in)], [file/<DATAPACK NAME> (world)]`, then you did it! If not, you can download a sample datapack [here](/samples/unit1/lesson1.zip) to compare.
+If you see something like `[vanilla (built-in)], [file/<DATAPACK NAME> (world)]`, then you did it! If not, you can download a sample datapack [here](/java_datapack_tutorial/samples/unit1/lesson1.zip) to compare.
