@@ -7,7 +7,7 @@ You should be familiar with your system and file explorer, be comfortable with c
 
 ---
 ## Enabling File Extensions
-Enabling file extensions will allow to you create functions that aren't secretly `.txt` files. On Windows 10, you can find this in the "View" tab. <br><br>![Enabling File Extensions](/images/enableFileExtensions.png)
+Enabling file extensions will allow to you create functions that aren't secretly `.txt` files. On Windows 10, you can find this in the "View" tab. <br><br>![Enabling File Extensions](/java_datapack_tutorial/images/enableFileExtensions.png)
 
 ---     
 ## Text Editors      
