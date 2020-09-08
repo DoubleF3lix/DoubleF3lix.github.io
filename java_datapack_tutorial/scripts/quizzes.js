@@ -186,7 +186,7 @@ async function displayQuizbox(unitNumber, lessonNumber) {
     let quizbox = document.getElementById("quizbox");
 
     // Get the exercise contents
-    const quizJSONContent = await fetch(`/quizzes/unit${unitNumber}/lesson${lessonNumber}/quiz.json`).then(r => r.json());
+    const quizJSONContent = await fetch(`/java_datapack_tutorial/quizzes/unit${unitNumber}/lesson${lessonNumber}/quiz.json`).then(r => r.json());
     let selectedQuestions = getRandomElements(quizJSONContent.questions, quizJSONContent.questionCount);
 
     // Compile each question into HTML

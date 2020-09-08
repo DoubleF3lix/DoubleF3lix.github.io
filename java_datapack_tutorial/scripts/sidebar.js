@@ -21,7 +21,7 @@ function toggleDropdown() {
 }
 
 async function displaySidebar() {
-    let sidebarLocation = "/pages/sidebar.html";
+    let sidebarLocation = "/java_datapack_tutorial/pages/sidebar.html";
     const sidebarHTML = await fetch(sidebarLocation).then(r => r.text());
     let sidebar = document.getElementById("sidebar");
     sidebar.innerHTML = sidebarHTML;
