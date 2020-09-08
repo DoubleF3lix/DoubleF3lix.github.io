@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/quizzes.css">
+
+        <!-- showdownjs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+
+        <!-- highlightjs -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+
+        <script src="/scripts/main.js"></script>
+        <script src="/scripts/quizzes.js"></script>
+        <script src="/scripts/sidebar.js"></script>
+        <script>clearStorage();</script>
+
+        <title>
+            Java Datapack Tutorial
+        </title>
+    </head>
+
+    <body>
+        <div id="sidebar"></div>
+        <script>displaySidebar();</script>
+
+        <!-- The main content -->
+        <div class="content">
+            <!-- Display the markdown file -->
+            <div id="display-unit1/lesson1-markdown">This content couldn't be loaded. Try again later.</div>
+            <script>displayMarkdownContent("unit1/lesson1");</script>
+
+            <a href='/index.html' class="changePage"><< Previous</a>
+            <a href='/pages/unit1/lesson2.html' class="changePage">Next >></a>
+        </div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

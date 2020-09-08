@@ -1,0 +1,11 @@
+{
+    "questionCount": 1,
+    "questions": [
+        {
+            "type": "text",
+            "prompt": "Fix this selector: <code>@e[type=cheese]</code>",
+            "box": "@e[${}=cheese]",
+            "answer": "@e[tag=cheese]"
+        }
+    ]
+}
