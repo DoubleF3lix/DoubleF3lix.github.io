@@ -198,8 +198,8 @@
 <div class="section" id="module-onyx.scoreboard">
 <span id="onyx-scoreboard"></span><h1>onyx.scoreboard<a class="headerlink" href="#module-onyx.scoreboard" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt id="onyx.scoreboard.resetPlayer">
-<code class="sig-prename descclassname">onyx.scoreboard.</code><code class="sig-name descname">resetPlayer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.resetPlayer" title="Permalink to this definition">¶</a></dt>
+<dt id="onyx.scoreboard.reset_player">
+<code class="sig-prename descclassname">onyx.scoreboard.</code><code class="sig-name descname">reset_player</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.reset_player" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resets all scores for a player</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -260,8 +260,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="onyx.scoreboard.Scoreboard.remove_allPlayers">
-<code class="sig-name descname">remove_allPlayers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Scoreboard.remove_allPlayers" title="Permalink to this definition">¶</a></dt>
+<dt id="onyx.scoreboard.Scoreboard.remove_all_players">
+<code class="sig-name descname">remove_all_players</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Scoreboard.remove_all_players" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove all players from a scoreboard</p>
 </dd></dl>
 
@@ -276,7 +276,287 @@
 <dd class="field-even"><p>A new player object</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Player</p>
+<dd class="field-odd"><p><a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player">Player</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="onyx.scoreboard.Player">
+<em class="property">class </em><code class="sig-prename descclassname">onyx.scoreboard.</code><code class="sig-name descname">Player</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">scoreboard</span></em>, <em class="sig-param"><span class="n">created</span></em>, <em class="sig-param"><span class="n">critera</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="onyx.scoreboard.Player.set">
+<code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.set" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><em>Player</em></a><em>]</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.add">
+<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.add" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><em>Player</em></a><em>]</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.subtract">
+<code class="sig-name descname">subtract</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.subtract" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><em>Player</em></a><em>]</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.multiply">
+<code class="sig-name descname">multiply</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.multiply" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><em>Player</em></a><em>]</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.divide">
+<code class="sig-name descname">divide</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.divide" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><em>Player</em></a><em>]</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.modulo">
+<code class="sig-name descname">modulo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.modulo" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><em>Player</em></a><em>]</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.set_if_less">
+<code class="sig-name descname">set_if_less</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.set_if_less" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the score to the value if the score is lower than the value
+:type value: <code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><code class="xref py py-class docutils literal notranslate"><span class="pre">Player</span></code></a>]
+:param value:
+:type value: Union[int, Player]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.set_if_greater">
+<code class="sig-name descname">set_if_greater</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.set_if_greater" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the score to the value if the score is greater than the value
+:type value: <code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><code class="xref py py-class docutils literal notranslate"><span class="pre">Player</span></code></a>]
+:param value:
+:type value: Union[int, Player]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.swap">
+<code class="sig-name descname">swap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.swap" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><em>Player</em></a><em>]</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the player from the scoreboard</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.enable">
+<code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.enable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables the score to be used in the trigger command</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.pow">
+<code class="sig-name descname">pow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.pow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raises the score to the exponent value
+:type value: <code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><code class="xref py py-class docutils literal notranslate"><span class="pre">Player</span></code></a>]
+:param value:
+:type value: Union[int, Player]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.sin">
+<code class="sig-name descname">sin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.sin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input is taken to a scale of 1 (automatically scaled to 10). Outputs to a scale of 10,000 (0.0197 =&gt; 197).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em><em>, </em><em>optional</em>) – The value of theta. If unspecified, the current value of the player is assigned to theta. Defaults to None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.cos">
+<code class="sig-name descname">cos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.cos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input is taken to a scale of 1 (automatically scaled to 10). Outputs to a scale of 10,000 (0.0197 =&gt; 197).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em><em>, </em><em>optional</em>) – The value of theta. If unspecified, the current value of the player is assigned to theta. Defaults to None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.tan">
+<code class="sig-name descname">tan</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.tan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input is taken to a scale of 1 (automatically scaled to 10). Outputs to a scale of 1 (1.0105 =&gt; 1).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em><em>, </em><em>optional</em>) – The value of theta. If unspecified, the current value of the player is assigned to theta. Defaults to None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.asin">
+<code class="sig-name descname">asin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.asin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input is taken to a scale of 1 (automatically scaled to 10). Outputs to a scale of 1000 (-0.021 =&gt; -21)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em><em>, </em><em>optional</em>) – The value of theta. Must be between -1 and 1. If unspecified, the current value of the player is assigned to theta. If the current value of the player is not between -1 and 1, the output will be set to the previous successful operation. Defaults to None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.acos">
+<code class="sig-name descname">acos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.acos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input is taken to a scale of 1 (automatically scaled to 10). Outputs to a scale of 1000 (-0.021 =&gt; -21)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em><em>, </em><em>optional</em>) – The value of theta. Must be between -1 and 1. If unspecified, the current value of the player is assigned to theta. If the current value of the player is not between -1 and 1, the output will be set to the previous successful operation. Defaults to None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.atan">
+<code class="sig-name descname">atan</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.atan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input is taken to a scale of 1 (automatically scaled to 10). Outputs to a scale of 1000 (-0.021 =&gt; -21)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em><em>, </em><em>optional</em>) – The value of theta. Must be between -1 and 1. If unspecified, the current value of the player is assigned to theta. If the current value of the player is not between -1 and 1, the output will be set to the previous successful operation. Defaults to None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.sqrt">
+<code class="sig-name descname">sqrt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.sqrt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Outputs to a precision of 1 decimal place.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>int</em><em>, </em><em>optional</em>) – The value to take the square root of. May break with very large values. Defaults to None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.rand_int">
+<code class="sig-name descname">rand_int</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lower_bound</span><span class="o">=</span><span class="default_value">- 2147483648</span></em>, <em class="sig-param"><span class="n">upper_bound</span><span class="o">=</span><span class="default_value">2147483647</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.rand_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates a random number between the range specified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lower_bound</strong> (<em>int</em><em>, </em><em>optional</em>) – Defaults to -2147483648.</p></li>
+<li><p><strong>upper_bound</strong> (<em>int</em><em>, </em><em>optional</em>) – Defaults to 2147483647.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.NOT">
+<code class="sig-name descname">NOT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.NOT" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><em>Player</em></a><em>]</em>) – The value to operaton on. If unspecified, the current value of the player is operated on.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.AND">
+<code class="sig-name descname">AND</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value_1</span></em>, <em class="sig-param"><span class="n">value_2</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.AND" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value_1</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><em>Player</em></a><em>]</em>) – The first value to operate on</p></li>
+<li><p><strong>value_2</strong> (<em>int</em><em>, </em><em>optional</em>) – If unspecified, the value of <code class="docutils literal notranslate"><span class="pre">value_1</span></code> is moved to <code class="docutils literal notranslate"><span class="pre">value_2</span></code>, and the value of the current player is assigned to <code class="docutils literal notranslate"><span class="pre">value_1</span></code>. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.OR">
+<code class="sig-name descname">OR</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value_1</span></em>, <em class="sig-param"><span class="n">value_2</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.OR" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value_1</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><em>Player</em></a><em>]</em>) – The first value to operate on</p></li>
+<li><p><strong>value_2</strong> (<em>int</em><em>, </em><em>optional</em>) – If unspecified, the value of <code class="docutils literal notranslate"><span class="pre">value_1</span></code> is moved to <code class="docutils literal notranslate"><span class="pre">value_2</span></code>, and the value of the current player is assigned to <code class="docutils literal notranslate"><span class="pre">value_1</span></code>. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.XOR">
+<code class="sig-name descname">XOR</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value_1</span></em>, <em class="sig-param"><span class="n">value_2</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.XOR" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value_1</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><em>Player</em></a><em>]</em>) – The first value to operate on</p></li>
+<li><p><strong>value_2</strong> (<em>int</em><em>, </em><em>optional</em>) – If unspecified, the value of <code class="docutils literal notranslate"><span class="pre">value_1</span></code> is moved to <code class="docutils literal notranslate"><span class="pre">value_2</span></code>, and the value of the current player is assigned to <code class="docutils literal notranslate"><span class="pre">value_1</span></code>. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.LEFT_SHIFT">
+<code class="sig-name descname">LEFT_SHIFT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value_1</span></em>, <em class="sig-param"><span class="n">value_2</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.LEFT_SHIFT" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value_1</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><em>Player</em></a><em>]</em>) – The value to shift.</p></li>
+<li><p><strong>value_2</strong> (<em>int</em><em>, </em><em>optional</em>) – The amount of bits to shift by. If unspecified, the value of <code class="docutils literal notranslate"><span class="pre">value_1</span></code> is moved to <code class="docutils literal notranslate"><span class="pre">value_2</span></code>, and the value of the current player is assigned to <code class="docutils literal notranslate"><span class="pre">value_1</span></code>. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onyx.scoreboard.Player.RIGHT_SHIFT">
+<code class="sig-name descname">RIGHT_SHIFT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value_1</span></em>, <em class="sig-param"><span class="n">value_2</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onyx.scoreboard.Player.RIGHT_SHIFT" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value_1</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><a class="reference internal" href="#onyx.scoreboard.Player" title="onyx.scoreboard.Player"><em>Player</em></a><em>]</em>) – The value to shift.</p></li>
+<li><p><strong>value_2</strong> (<em>int</em><em>, </em><em>optional</em>) – The amount of bits to shift by. If unspecified, the value of <code class="docutils literal notranslate"><span class="pre">value_1</span></code> is moved to <code class="docutils literal notranslate"><span class="pre">value_2</span></code>, and the value of the current player is assigned to <code class="docutils literal notranslate"><span class="pre">value_1</span></code>. Defaults to None.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
