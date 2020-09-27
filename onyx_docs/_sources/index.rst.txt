@@ -8,6 +8,7 @@ onyx
    commands
    data
    datapack
+   delay
    effect
    enums
    execute
