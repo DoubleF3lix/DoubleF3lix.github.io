@@ -1,0 +1,5 @@
+You'll need python for this to work.
+First, import the os library.
+Locate the peanut butter file, and copy its full path.
+Then, in a python terminal, use the following:
+os.rename(peanut_butter_file_path, peanut_butter_file_path_but_extension_replaced_with_zip_instead_of_pb)
