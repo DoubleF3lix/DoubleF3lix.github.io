@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: doublefelix.cf
-Token: 0de762a4c91f507cccbc093fb15086a3ee2aa0b63c545f30260c877efaae5361
