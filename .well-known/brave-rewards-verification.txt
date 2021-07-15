@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: doublef3lix.github.io
+Token: 6923a1e17bca6ea988697f69a514654278d51cc85887af68c0015d17d8418d23
