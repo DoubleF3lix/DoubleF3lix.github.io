@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+        async function main() {
+            let pyodide = await loadPyodide({indexURL: "https://cdn.jsdelivr.net/pyodide/v0.18.1/full/" });
+            await pyodide.loadPackage("micropip");
+            pyodide.runPythonAsync(`
+                import micropip
+                await micropip.install("tokenstream")
+                await micropip.install("allay")
+                
+                import allay
+                import js
+
+                parser = allay.Parser()
+                
+                def parse_text(text):
+                    js.document.getElementById("output_text").value = parser.parse(text)
+            `).then(() => {
+                console.log("done")
+                self.parse_text = pyodide.globals.get("parse_text");
+                document.getElementById("confirm_button").disabled = false;
+            });
+        };
+        main();
+    </script>
+
+    <input type="text" name="input", id="input_text"/>
+    <button id="confirm_button" disabled onclick="parse_text(document.getElementById('input_text').value);">Parse</button>
+    <input type="text" name="output", id="output_text" readonly="true"/>
+  </body>
+</html>
