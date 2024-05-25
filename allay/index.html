@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+      <script src="/allay/main.js"></script>
+      <link rel="stylesheet" href="/allay/main.css">
+  </head>
+  <body>
+    <script type="text/javascript">
+        main();
+    </script>
+
+    <input type="text" name="input", id="input_text"/>
+    <input type="text" name="output", id="output_text" readonly="true"/>
+
+    <br>
+    <br>
+    <button class="center_horizontally" id="parse_button" disabled onclick="parse_text(document.getElementById('input_text').value);">Parse</button>
+
+  </body>
+</html>

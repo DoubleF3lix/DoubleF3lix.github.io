@@ -1,0 +1,22 @@
+button {
+    background-color: #47CDFF;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+    width: 80%;
+}
+
+.center_horizontally {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.vertical_line {
+    border-left: thick solid #000000;
+}
