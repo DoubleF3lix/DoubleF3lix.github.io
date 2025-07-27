@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Live or Live Micro</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <style>
+            body {
+                background-color: #121212;
+            }
+
+            .main {
+                display: flex;
+                margin: auto;
+            }
+
+            #gameMenu th, #gameMenu td, #secretsMenu th, #secretsMenu td {
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 64px;
+            }
+
+            th {
+                text-align: right;
+                margin-right: 2rem;
+                display: block;
+            }
+
+            @keyframes flash-red {
+                0%   { background-color: #121212; }
+                50%  { background-color: #dc2626; } /* red-600 */
+                100% { background-color: #121212; }
+            }
+
+            @keyframes flash-green {
+                0%   { background-color: #121212; }
+                50%  { background-color: #16a34a; } /* green-600 */
+                100% { background-color: #121212; }
+            }
+
+            .flash-red {
+                animation: flash-red 0.4s ease;
+            }
+
+            .flash-green {
+                animation: flash-green 0.4s ease;
+            }
+        </style>
+        
+        <script>
+            let liveRounds = 0;
+            let blankRounds = 0;
+
+            let liveRoundsLeft = 0;
+            let blankRoundsLeft = 0;
+
+            $(document).ready(function() {
+                $(".menu").hide();
+                $("#gameMenu").show();
+
+                $("#liveRounds, #blankRounds").on("blur", function() {
+                    if ($("#liveRounds").val() !== liveRounds.toString()) {
+                        liveRounds = liveRoundsLeft = parseInt($("#liveRounds").val());
+                        refreshDisplays();
+                    }
+                    if ($("#blankRounds").val() !== blankRounds.toString()) {
+                        blankRounds = blankRoundsLeft = parseInt($("#blankRounds").val());
+                        refreshDisplays();
+                    }
+                });
+
+                refreshDisplays();
+
+                navigator.wakeLock.request("screen");
+            });
+
+            function loadSubmenu(submenu) {
+                $(".menu").hide();
+                $(`#${submenu}`).show();
+            }
+
+            function reloadChamber() {
+                liveRounds = liveRoundsLeft = randomNum(1, 4);
+                blankRounds = blankRoundsLeft = Math.max(1, Math.min(4, randomNum(liveRounds - 2, liveRounds + 2))); 
+                refreshDisplays();
+            }
+
+            function fire() {
+                if (liveRoundsLeft == 0 && blankRoundsLeft == 0) {
+                    liveRounds = 0;
+                    blankRounds = 0;
+                    refreshDisplays();
+                    return;
+                }
+
+                const isLive = Math.random() < (liveRoundsLeft / (liveRoundsLeft + blankRoundsLeft));
+                $("#invertCheckbox").prop("checked", false);
+                if (isLive) {
+                    liveRoundsLeft -= 1;
+                } else {
+                    blankRoundsLeft -= 1;
+                }
+                refreshDisplays();
+
+                const inverted = $("#invertCheckbox").is(":checked");
+                flashBg((isLive !== inverted) ? "flash-red" : "flash-green");
+            }
+
+            function refreshDisplays() {
+                $("#liveRounds").val(liveRounds);
+                $("#blankRounds").val(blankRounds);
+                $("#liveRoundsLeft").text(liveRoundsLeft);
+                $("#blankRoundsLeft").text(blankRoundsLeft);
+            }
+
+            function randomNum(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            function flashBg(className) {
+                document.body.classList.remove("flash-red", "flash-green");
+                void document.body.offsetWidth;
+                document.body.classList.add(className);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="flex flex-col w-screen h-screen">
+            <div class="m-auto min-w-[90%] lg:min-w-0">
+                <div id="gameMenu" class="menu">
+                    <table class="mb-16 mx-auto">
+                        <tr>
+                            <th>Live Rounds:</th>
+                            <td><input id="liveRounds" class="w-[2.5rem]"/></td>
+                        </tr>
+                        <tr>
+                            <th>Blank Rounds:</th>
+                            <td><input id="blankRounds" class="w-[2.5rem]"/></td>
+                        </tr>
+                    </table>
+
+                    <div class="flex flex-col gap-4">
+                        <button class="rounded-xl bg-sky-600 px-4 py-2 text-4xl text-white font-bold hover:bg-sky-300 h-[5rem] lg:h-[3rem] lg:text-2xl" onclick="fire()">Fire</button>
+                        <div class="flex gap-4">
+                            <button class="rounded-xl bg-green-500 px-4 py-2 text-4xl text-white font-bold hover:bg-green-300 grow-1 h-[5rem] lg:h-[3rem] lg:text-2xl" onclick="reloadChamber()">Reload</button>
+                            <div class="flex border-solid border-2 border-white rounded-xl p-1 px-3 items-center">
+                                <input id="invertCheckbox" type="checkbox" autocomplete="off" class="w-8 h-8 lg:w-4 lg:h-4" /> 
+                                <label for="invertCheckbox" class="text-4xl text-white font-bold shrink-0 pl-2 lg:text-2xl leading-none">Invert</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="itemListMenu" class="menu mx-auto">
+                    <table class="mx-auto text-white text-6xl lg:text-4xl border-spacing-2 border-separate"> 
+                        <tr>
+                            <th>6</th>
+                            <td>Reverse Turn Order</td>
+                        </tr>
+                        <tr>
+                            <th>7</th>
+                            <td>Rack Chamber</td>
+                        </tr>
+                        <tr>
+                            <th>8</th>
+                            <td>+1 Life</td>
+                        </tr>
+                        <tr>
+                            <th>9</th>
+                            <td>Steal</td>
+                        </tr>
+                        <tr>
+                            <th>10</th>
+                            <td>Life Gamble</td>
+                        </tr>
+                        <tr>
+                            <th>J</th>
+                            <td>Invert</td>
+                        </tr>
+                        <tr>
+                            <th>Q</th>
+                            <td>Chamber Check</td>
+                        </tr>
+                        <tr>
+                            <th>K</th>
+                            <td>Double Damage</td>
+                        </tr>
+                        <tr>
+                            <th>A</th>
+                            <td>Skip</td>
+                    </table>
+                </div>
+                <div id="secretsMenu" class="menu">
+                    <table class="mb-16 mx-auto">
+                        <tr>
+                            <th>Live Rounds Left:</th>
+                            <td id="liveRoundsLeft">0</td>
+                        </tr>
+                        <tr>
+                            <th>Blank Rounds Left:</th>
+                            <td id="blankRoundsLeft">0</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class="flex flex-col lg:flex-row px-6 gap-6 pb-4 w-full text-2xl text-white">
+                <button class="flex-1 mx-4 lg:min-w-[150px] rounded-xl border-solid border-2 border-white bg-neutral-900 px-4 py-2 hover:bg-neutral-600 active:bg-neutral-500" onClick="loadSubmenu('gameMenu')">Game</button>
+                <button class="flex-1 mx-4 lg:min-w-[150px] rounded-xl border-solid border-2 border-white bg-neutral-900 px-4 py-2 hover:bg-neutral-600 active:bg-neutral-500" onClick="loadSubmenu('itemListMenu')">Charity Mode</button>
+                <button class="flex-1 mx-4 lg:min-w-[150px] rounded-xl border-solid border-2 border-white bg-neutral-900 px-4 py-2 hover:bg-neutral-600 active:bg-neutral-500" onClick="loadSubmenu('secretsMenu')">Secrets</button>
+            </div>
+        </div>
+    </body>
+</html>
