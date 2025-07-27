@@ -18,7 +18,7 @@
             #gameMenu th, #gameMenu td, #secretsMenu th, #secretsMenu td {
                 color: white;
                 font-family: Arial, Helvetica, sans-serif;
-                font-size: 64px;
+                font-size: 8vw;
             }
 
             th {
@@ -61,11 +61,11 @@
 
                 $("#liveRounds, #blankRounds").on("blur", function() {
                     if ($("#liveRounds").val() !== liveRounds.toString()) {
-                        liveRounds = liveRoundsLeft = parseInt($("#liveRounds").val());
+                        liveRounds = liveRoundsLeft = parseInt($("#liveRounds").val()) || 0;
                         refreshDisplays();
                     }
                     if ($("#blankRounds").val() !== blankRounds.toString()) {
-                        blankRounds = blankRoundsLeft = parseInt($("#blankRounds").val());
+                        blankRounds = blankRoundsLeft = parseInt($("#blankRounds").val()) || 0;
                         refreshDisplays();
                     }
                 });
@@ -132,11 +132,11 @@
                     <table class="mb-16 mx-auto">
                         <tr>
                             <th>Live Rounds:</th>
-                            <td><input id="liveRounds" class="w-[2.5rem]"/></td>
+                            <td><input id="liveRounds" class="w-[8rem]"/></td>
                         </tr>
                         <tr>
                             <th>Blank Rounds:</th>
-                            <td><input id="blankRounds" class="w-[2.5rem]"/></td>
+                            <td><input id="blankRounds" class="w-[8rem]"/></td>
                         </tr>
                     </table>
 
@@ -204,7 +204,7 @@
                 </div>
 
             </div>
-            <div class="flex flex-col lg:flex-row px-6 gap-6 pb-4 w-full text-2xl text-white">
+            <div class="flex flex-col md:flex-row px-6 gap-6 pb-4 w-full text-2xl text-white">
                 <button class="flex-1 mx-4 lg:min-w-[150px] rounded-xl border-solid border-2 border-white bg-neutral-900 px-4 py-2 hover:bg-neutral-600 active:bg-neutral-500" onClick="loadSubmenu('gameMenu')">Game</button>
                 <button class="flex-1 mx-4 lg:min-w-[150px] rounded-xl border-solid border-2 border-white bg-neutral-900 px-4 py-2 hover:bg-neutral-600 active:bg-neutral-500" onClick="loadSubmenu('itemListMenu')">Charity Mode</button>
                 <button class="flex-1 mx-4 lg:min-w-[150px] rounded-xl border-solid border-2 border-white bg-neutral-900 px-4 py-2 hover:bg-neutral-600 active:bg-neutral-500" onClick="loadSubmenu('secretsMenu')">Secrets</button>
